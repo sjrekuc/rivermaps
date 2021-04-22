@@ -115,20 +115,19 @@ function downloadUrl(url, callback) {
         request.send(null);
  }; // downloadUrl
       
-function doNothing() {};   
+function doNothing() {};
+
+var jsonRivers
 
 function loadJSON(url) {
-    // fetch(‘url’).then(response => response.json())
-    // fetch(url).then(async response => {
-    //   try {
-    //   const data = await response.json()
-    //   console.log('response data?', data)
-    //  } catch(error) {
-    //   console.log('Error happened here!')
-    //   console.error(error)
-    //  }
-    // })
-    // var jsonRivers = JSON.parse(url)
+    let request = new XMLHttpRequest();
+    request.open('GET', url);
+    request.responseType = 'json';
+    request.send();
+    request.onload = function() {
+        jsonRivers = request.response;
+        console.log(jsonRivers)
+    }
 }
 
 
@@ -356,7 +355,7 @@ markerCluster.setMaxZoom(10);
 
 loadJSON('http://rivermaps.co/rivers.json')
 
-// console.log(jsonRivers)
+console.log(jsonRivers)
 
 
 
