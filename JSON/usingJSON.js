@@ -6,7 +6,8 @@ var includeVisual = "timing";
 var curDate = new Date();
 var curYear = curDate.getFullYear();
 var months = ["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"];
-var jsonRivers
+var jsonRivers;
+var allRivers = [];
 
 var markerCluster;
 
@@ -126,9 +127,30 @@ function loadJSON(url, callback) {
     request.send();
     request.onload = function() {
         jsonRivers = request.response;
-        // may have to parse the JSON into RiverSection objects here
-    }
-}
+        // parse the JSON into RiverSection objects here
+        console.log(jsonRivers.length);
+        for (var riverIndex = 0; riverIndex < jsonRivers.length; riverIndex++) {
+		    for (sectIndex = 0; sectIndex < jsonRivers[riverIndex].length; sectIndex++) {
+		        // if section is visual inspection, use the child architype for visual sections
+		        if (jsonRivers[riverIndex][sectIndex]["USGSsite"] == "visual") {
+		            var newSect = new visualRiverSection(jsonRivers[riverIndex][sectIndex]["pos"], jsonRivers[riverIndex][sectIndex]["title"], jsonRivers[riverIndex][sectIndex]["clabel"], jsonRivers[riverIndex][sectIndex]["rclass"], jsonRivers[riverIndex][sectIndex]["rcolor"], jsonRivers[riverIndex][sectIndex]["lowLmt"], jsonRivers[riverIndex][sectIndex]["upLmt"]);
+		            newSect.timing = jsonRivers[riverIndex][sectIndex]["timing"];
+		            newSect.infoContent = jsonRivers[riverIndex][sectIndex]["infoContent"];
+		        } else {
+		            var newSect = new RiverSection(jsonRivers[riverIndex][sectIndex]["pos"], jsonRivers[riverIndex][sectIndex]["title"], jsonRivers[riverIndex][sectIndex]["clabel"], jsonRivers[riverIndex][sectIndex]["rclass"], jsonRivers[riverIndex][sectIndex]["rcolor"], jsonRivers[riverIndex][sectIndex]["lowLmt"], jsonRivers[riverIndex][sectIndex]["upLmt"]);
+		            newSect.USGSsite = jsonRivers[riverIndex][sectIndex]["USGSsite"];
+		            newSect.infoContent = jsonRivers[riverIndex][sectIndex]["infoContent"];
+		        };
+		        allRivers.push(newSect);
+		        // access the individual section parameters
+		        // var newSect = new RiverSection()
+		        // call to RiverSection to use those parameters in making the 
+		        // console.log(jsonRivers[riverIndex][sectIndex]["title"]);
+		    }; // for loop through sections
+        }; // for loop through rivers
+        console.log(allRivers);
+    }; // request response
+}; // loadJSON function
 
 // this will contain all the information of the river section
 var RiverSection = function (pos,title,clabel,rclass,rcolor,lowLmt,upLmt) {
