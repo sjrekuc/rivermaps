@@ -64,34 +64,34 @@ function pullUSWater(){
         			USWaterlist[tempArr[0]] = tempArr[1];
         		};
         		// for loop through all rivers to update data and put in info markers
-        		for (var riverIndex = 0; riverIndex < jsonRivers.length; riverIndex++){
+        		for (var riverIndex = 0; riverIndex < allRivers.length; riverIndex++){
         			// loop through all of the sections
-        			for (sectIndex = 0; sectIndex < jsonRivers[riverIndex].length; sectIndex++) {
+        			for (sectIndex = 0; sectIndex < allRivers[riverIndex].length; sectIndex++) {
         			
         				// loop through all of the gauges for a section
-        				for (var i = 0; i < jsonRivers[riverIndex][sectIndex].USGSsite.length; i++) {
+        				for (var i = 0; i < allRivers[riverIndex][sectIndex].USGSsite.length; i++) {
         					// check that this isn't a visual flow section
-        					if (jsonRivers[riverIndex][sectIndex].USGSsite[i] == "visual"){}
+        					if (allRivers[riverIndex][sectIndex].USGSsite[i] == "visual"){}
         					else {
-        					jsonRivers[riverIndex][sectIndex].flow[i] = USWaterlist[jsonRivers[riverIndex][sectIndex].USGSsite[i]];
+        					allRivers[riverIndex][sectIndex].flow[i] = USWaterlist[allRivers[riverIndex][sectIndex].USGSsite[i]];
         					} // else statement
         					}; // loop through all of the gauges for a section
         				// check whether this is a visual flow section
-        				if (jsonRivers[riverIndex][sectIndex].USGSsite[0] == "visual"){
-        				jsonRivers[riverIndex][sectIndex].calcFlow();
-        				jsonRivers[riverIndex][sectIndex].infoContent += "<p> Typically run: " + months[jsonRivers[riverIndex][sectIndex].timing[0].getMonth()] + " "+ jsonRivers[riverIndex][sectIndex].timing[0].getDate() + " to " + months[jsonRivers[riverIndex][sectIndex].timing[1].getMonth()] + " "+ jsonRivers[riverIndex][sectIndex].timing[1].getDate() + "</p>";
+        				if (allRivers[riverIndex][sectIndex].USGSsite[0] == "visual"){
+        				allRivers[riverIndex][sectIndex].calcFlow();
+        				allRivers[riverIndex][sectIndex].infoContent += "<p> Typically run: " + months[allRivers[riverIndex][sectIndex].timing[0].getMonth()] + " "+ allRivers[riverIndex][sectIndex].timing[0].getDate() + " to " + months[allRivers[riverIndex][sectIndex].timing[1].getMonth()] + " "+ allRivers[riverIndex][sectIndex].timing[1].getDate() + "</p>";
         				// if statement to include a related flow
-        				if (jsonRivers[riverIndex][sectIndex].USGSsite[1]) {
-        					jsonRivers[riverIndex][sectIndex].infoContent += "<p> Related Flow: " + jsonRivers[riverIndex][sectIndex].curFlow + " cfs</p>";
+        				if (allRivers[riverIndex][sectIndex].USGSsite[1]) {
+        					allRivers[riverIndex][sectIndex].infoContent += "<p> Related Flow: " + allRivers[riverIndex][sectIndex].curFlow + " cfs</p>";
         					}; // 
         				} // if there is a gauge, then use it
         				else {
-        				jsonRivers[riverIndex][sectIndex].calcFlow();
-        				jsonRivers[riverIndex][sectIndex].infoContent += "<p> Recommended Lower Limit: " + jsonRivers[riverIndex][sectIndex].lowLmt;
-        				jsonRivers[riverIndex][sectIndex].infoContent += " cfs</p>";
-        				jsonRivers[riverIndex][sectIndex].infoContent += "Current Flow: " + jsonRivers[riverIndex][sectIndex].curFlow + " cfs";
+        				allRivers[riverIndex][sectIndex].calcFlow();
+        				allRivers[riverIndex][sectIndex].infoContent += "<p> Recommended Lower Limit: " + allRivers[riverIndex][sectIndex].lowLmt;
+        				allRivers[riverIndex][sectIndex].infoContent += " cfs</p>";
+        				allRivers[riverIndex][sectIndex].infoContent += "Current Flow: " + allRivers[riverIndex][sectIndex].curFlow + " cfs";
         				// add the CFS to the rollover title
-        				jsonRivers[riverIndex][sectIndex].title += " " + jsonRivers[riverIndex][sectIndex].curFlow + " cfs";
+        				allRivers[riverIndex][sectIndex].title += " " + allRivers[riverIndex][sectIndex].curFlow + " cfs";
    					}; // else statement	
         			}; // loop through sections
         		}; // loop through rivers
@@ -143,12 +143,8 @@ function loadJSON(url, callback) {
 		        };
 		        allRivers.push(newSect);
 		        // access the individual section parameters
-		        // var newSect = new RiverSection()
-		        // call to RiverSection to use those parameters in making the 
-		        // console.log(jsonRivers[riverIndex][sectIndex]["title"]);
 		    }; // for loop through sections
         }; // for loop through rivers
-        console.log(allRivers);
     }; // request response
 }; // loadJSON function
 
@@ -288,8 +284,7 @@ var iconStroke = 3;
 // opacity of the icons
 var iconOpacity = 0.65;
 
-/* Marker function takes in a river array that is contains an array of River Section Objects. The function puts those markers on the map and then feeds the river array with the corresponding marker for later use (deletion) 
-*/
+/* Original function: Marker function takes in a river array that is contains an array of River Section Objects. The function puts those markers on the map and then feeds the river array with the corresponding marker for later use (deletion) 
 function createMarker(river){
 	// loop to create markers
 	for (var sectIndex = 0; sectIndex < river.length; sectIndex++) {
@@ -315,9 +310,35 @@ river[sectIndex].markerNum = markerIndex;
 markerIndex++; // steps marker index to avoid overwriting
 }; // for loop for markers
 } // createMarker function
+*/
+
+/// New createMarker function: take in a river section and puts that 1 marker on the map; feeds the river array with the corresponding marker index
+function createMarker(river){
+	marker[markerIndex] = new google.maps.Marker({
+  	position: river.position,
+  	map: map,
+   	label: river.clabel,
+    	title: river.title,
+    	icon: {
+      	path: google.maps.SymbolPath.CIRCLE,
+      	scale: iconScale,
+      	strokeColor: river.rcolor,
+      	strokeWeight: iconStroke,
+      	fillColor: 'white',
+      	fillOpacity: iconOpacity
+        } // label details
+	}); // marker function
+// adds the info windows for each marker
+// function for creating the listener on the marker for the info window
+addInfoListener(marker, markerIndex, river);
+
+river.markerNum = markerIndex;
+markerIndex++; // steps marker index to avoid overwriting
+} // createMarker function
 
 
-// create the map variable before the map initializing
+
+// create the map variable before the map initializing (making it global)
 var map;
 // initializes the map
 function initMap() {
@@ -336,60 +357,10 @@ function initMap() {
 
 }; //initMap function
 
-// function to pull in data from XML 
-
-  
-/*
-          // Change this depending on the name of your PHP or XML file
-          downloadUrl('http://rivermaps.co//mapmarkers2.xml', function(data) {
-            var xml = data.responseXML;
-            var rivers = xml.documentElement.getElementsByTagName('river');
-            Array.prototype.forEach.call(rivers, function(riverElem) {
-              var id = riverElem.getAttribute('id');
-              var name = riverElem.getAttribute('name');
-              var infoContent = riverElem.getAttribute('infoContent');
-              var rcolor = riverElem.getAttribute('rcolor');
-              var clabel = riverElem.getAttribute('clabel');
-              var point = new google.maps.LatLng(
-                  parseFloat(riverElem.getAttribute('lat')),
-                  parseFloat(riverElem.getAttribute('lng')));
-              var infowincontent = document.createElement('div');
-              var strong = document.createElement('strong');
-              strong.textContent = name
-              infowincontent.appendChild(strong);
-              infowincontent.appendChild(document.createElement('br'));
-
-              var text = document.createElement('text');
-              text.textContent = infoContent;
-              infowincontent.appendChild(text);
-              
-// instead of adding these markers to the map, they need to be added to the jsonRivers matrix 
-              var marker = new google.maps.Marker({
-                map: map,
-                position: point,
-                label: clabel,
-                icon: {
-      			path: google.maps.SymbolPath.CIRCLE,
-      			scale: 18,
-      			strokeColor: rcolor,
-      			strokeWeight: iconStroke,
-      			fillColor: 'white',
-      			fillOpacity: iconOpacity
-      			}
-              });
-              marker.addListener('click', function() {
-                infoWindow.setContent(infowincontent);
-                infoWindow.open(map, marker);
-              });
-            });
-          });
-*/
-
 var currentMarkers = [];
 
 // this function checks the flow of each section versus the recommended flow
 function checkFlow(riverSect){
-	
 	// change if statement 
 	if (riverSect.runSect == 1) {
 		riverSect.calcFlow();
@@ -408,6 +379,8 @@ function checkFlow(riverSect){
 	}
 }; // checkFlow
 
+
+/* Old function that looped through rivers to check the flow for a particular section
 // function that checks all the sections of a particular river
 function checkRiver(river){
 	// loop through sections
@@ -415,16 +388,20 @@ function checkRiver(river){
 		checkFlow(river[sectIndex]);
 	}; // for loop through sections
 }; // checkRiver function
+*/
 
-/* updateFlow is the master function that loops through all rivers and all sections for everything in the jsonRivers array. As the function loops through, it checks that the flow of each section is within the runnable flow levels for that section */
+
+
+
+/* updateFlow is the master function that loops through all rivers and all sections for everything in the allRivers array. As the function loops through, it checks that the flow of each section is within the runnable flow levels for that section */
 function updateFlowMbl() {
 	currentMarkers = [];
 	includeVisual = document.getElementById("visual-flow-mbl").value;
 	//console.log(includeVisual);
 	
 	// loop through all rivers
-	for (var riverIndex = 0; riverIndex < jsonRivers.length; riverIndex++) {
-		checkRiver(jsonRivers[riverIndex]);
+	for (var riverIndex = 0; riverIndex < allRivers.length; riverIndex++) {
+		checkFlow(allRivers[riverIndex]);
 	}; // loop through rivers
 	// check difficulty
 	updateDiffMbl();
@@ -441,8 +418,8 @@ includeVisual = document.getElementById("visual-flow").value;
 //console.log(includeVisual);
 
 // loop through all rivers
-	for (var riverIndex = 0; riverIndex < jsonRivers.length; riverIndex++) {
-		checkRiver(jsonRivers[riverIndex]);
+	for (var riverIndex = 0; riverIndex < allRivers.length; riverIndex++) {
+		checkFlow(allRivers[riverIndex]);
 	}; // loop through rivers
 	// check difficulty
 	updateDiff();
@@ -451,7 +428,7 @@ includeVisual = document.getElementById("visual-flow").value;
 	markerCluster = new MarkerClusterer(map, currentMarkers, clusterOptions);
 }; // updateFlow function
 
-
+/* old function that looped through all of the sections in a river to reset them. We don't need need this anymore without the data nested
 // function that loops through and resets all of the markers and runSect for all the sections of a river
 function resetRiver(river){
 	for (var sectIndex = 0; sectIndex < river.length; sectIndex++) {
@@ -459,6 +436,13 @@ function resetRiver(river){
 	}; // loop through all of the river sections
 
 }; // resetRiver function
+*/
+allRivers
+
+
+
+
+
 
 // May want to make the river function reset the sliders as well
 
@@ -476,8 +460,8 @@ document.getElementById("upperLimitMbl").value = 6.06;
 document.getElementById("displayUpLmtMbl").textContent = 'VI';
 
 // loop through the rivers to reset them
-	for (var riverIndex = 0; riverIndex < jsonRivers.length; riverIndex++) {
-		resetRiver(jsonRivers[riverIndex]);
+	for (var riverIndex = 0; riverIndex < allRivers.length; riverIndex++) {
+		resetRiver(allRivers[riverIndex]);
 		}; // for loop through all of the rivers
 	markerCluster.clearMarkers();
 	markerCluster = new MarkerClusterer(map, marker, clusterOptions);
@@ -513,7 +497,7 @@ function checkRiverDiff(river) {
 }; // checkRiverDiff; checking difficulty of rivers
 
 
-/* updateDiff is the master function that loops through all rivers and all sections for everything in the jsonRivers array; this function checks if the river is within the bounds of difficulty (Class I - VI) that the user specifies */
+/* updateDiff is the master function that loops through all rivers and all sections for everything in the allRivers array; this function checks if the river is within the bounds of difficulty (Class I - VI) that the user specifies */
 cLabels = ['II-', 'II', 'II+', 'III-', 'III', 'III+', 'IV-', 'IV', 'IV+', 'V-', 'V', 'V+', 'VI'];
 
 
@@ -548,9 +532,9 @@ currentMarkers = [];
 		var upColor = "red";
 	} else { var upColor = "black";}
 	viewUpLmt.style.color = upColor;
-	for (var riverIndex = 0; riverIndex < jsonRivers.length; riverIndex++) {
-		checkRiverDiff(jsonRivers[riverIndex]);
-	}; // loop through rivers
+	for (var riverIndex = 0; riverIndex < allRivers.length; riverIndex++) {
+		checkDiff(allRivers[riverIndex]);
+	}; // loop through sections
 	//console.log(userUpLmt);
 	//console.log(userLowLmt);
 	// resets the cluster
@@ -592,9 +576,9 @@ currentMarkers = [];
 		var upColor = "red";
 	} else { var upColor = "black";}
 	viewUpLmt.style.color = upColor;
-	for (var riverIndex = 0; riverIndex < jsonRivers.length; riverIndex++) {
-		checkRiverDiff(jsonRivers[riverIndex]);
-	}; // loop through rivers
+	for (var riverIndex = 0; riverIndex < allRivers.length; riverIndex++) {
+		checkDiff(allRivers[riverIndex]);
+	}; // loop through sections
 	//console.log(userUpLmt);
 	//console.log(userLowLmt);
 	// resets the cluster
@@ -611,12 +595,12 @@ function colorRiverFlow (river) {
 	}; // loop through all of the river sections
 }; // colorRiverFlow function
 
-/* colorFlow is the master function that loops through all rivers and all section for jsonRivers array; this function changes the color of the icon based on the flow of the river.
+/* colorFlow is the master function that loops through all rivers and all section for allRivers array; this function changes the color of the icon based on the flow of the river.
 */
 function colorFlow() {
 	// loop through all of the sections
-	for (var riverIndex = 0; riverIndex < jsonRivers.length; riverIndex++) {
-		colorRiverFlow(jsonRivers[riverIndex]);
+	for (var riverIndex = 0; riverIndex < allRivers.length; riverIndex++) {
+		colorRiverFlow(allRivers[riverIndex]);
 	}; // loop through rivers
 	alert("White is not running; Brown is near the possibility of running; Yellow is getting rocky; Green is good to go; Blue is getting high; Purple is just above the upper recommended; red is raging well above the recommended");
 }; // colorFlow function
@@ -630,11 +614,12 @@ function colorRiverDiff (river) {
 }; // colorRiverDiff function
 
 
-/* colorDiff is the master function that loops through all rivers and all section for jsonRivers array; this function changes the color of the icon based on the difficulty of the river section.
+/* colorDiff is the master function that loops through all rivers and all section for allRivers array; this function changes the color of the icon based on the difficulty of the river section.
 */
 function colorDiff() {
 	// loop through all of the sections
-	for (var riverIndex = 0; riverIndex < jsonRivers.length; riverIndex++) {
-		colorRiverDiff(jsonRivers[riverIndex]);
+	for (var riverIndex = 0; riverIndex < allRivers.length; riverIndex++) {
+		colorRiverDiff(allRivers[riverIndex]);
 	}; // loop through rivers
 }; // colorDiff function
+
