@@ -63,39 +63,38 @@ function pullUSWater(){
         			var tempArr = arrLines[i].split("=");
         			USWaterlist[tempArr[0]] = tempArr[1];
         		};
-        		// for loop through all rivers to update data and put in info markers
+        		// for loop through all sections to update data and put in info markers
         		for (var riverIndex = 0; riverIndex < allRivers.length; riverIndex++){
-        			// loop through all of the sections
-        			for (sectIndex = 0; sectIndex < allRivers[riverIndex].length; sectIndex++) {
-        				// loop through all of the gauges for a section
-        				for (var i = 0; i < allRivers[riverIndex][sectIndex].USGSsite.length; i++) {
-        					// check that this isn't a visual flow section
-        					if (allRivers[riverIndex][sectIndex].USGSsite[i] == "visual"){}
-        					else {
-        					allRivers[riverIndex][sectIndex].flow[i] = USWaterlist[allRivers[riverIndex][sectIndex].USGSsite[i]];
-        					} // else statement
-        					}; // loop through all of the gauges for a section
-        				// check whether this is a visual flow section
-        				if (allRivers[riverIndex][sectIndex].USGSsite[0] == "visual"){
-        				allRivers[riverIndex][sectIndex].calcFlow();
-        				allRivers[riverIndex][sectIndex].infoContent += "<p> Typically run: " + months[allRivers[riverIndex][sectIndex].timing[0].getMonth()] + " "+ allRivers[riverIndex][sectIndex].timing[0].getDate() + " to " + months[allRivers[riverIndex][sectIndex].timing[1].getMonth()] + " "+ allRivers[riverIndex][sectIndex].timing[1].getDate() + "</p>";
-        				// if statement to include a related flow
-        				if (allRivers[riverIndex][sectIndex].USGSsite[1]) {
-        					allRivers[riverIndex][sectIndex].infoContent += "<p> Related Flow: " + allRivers[riverIndex][sectIndex].curFlow + " cfs</p>";
-        					}; // 
-        				} // if there is a gauge, then use it
-        				else {
-        				allRivers[riverIndex][sectIndex].calcFlow();
-        				allRivers[riverIndex][sectIndex].infoContent += "<p> Recommended Lower Limit: " + allRivers[riverIndex][sectIndex].lowLmt;
-        				allRivers[riverIndex][sectIndex].infoContent += " cfs</p>";
-        				allRivers[riverIndex][sectIndex].infoContent += "Current Flow: " + allRivers[riverIndex][sectIndex].curFlow + " cfs";
+    				// loop through all of the gauges for a section
+    				for (var i = 0; i < allRivers[riverIndex].USGSsite.length; i++) {
+    					// check that this isn't a visual flow section
+    					if (allRivers[riverIndex].USGSsite[i] == "visual"){}
+    					else {
+    					allRivers[riverIndex].flow[i] = USWaterlist[allRivers[riverIndex].USGSsite[i]];
+    					} // else statement
+    					}; // loop through all of the gauges for a section
+    				// check whether this is a visual flow section
+    				if (allRivers[riverIndex].USGSsite[0] == "visual"){
+    				    allRivers[riverIndex].calcFlow();
+    				    allRivers[riverIndex].infoContent += "<p> Typically run: " + months[allRivers[riverIndex].timing[0].getMonth()] + " "+ allRivers[riverIndex].timing[0].getDate() + " to " + months[allRivers[riverIndex].timing[1].getMonth()] + " "+ allRivers[riverIndex].timing[1].getDate() + "</p>";
+    				// if statement to include a related flow
+    				if (allRivers[riverIndex].USGSsite[1]) {
+    					allRivers[riverIndex].infoContent += "<p> Related Flow: " + allRivers[riverIndex].curFlow + " cfs</p>";
+    					}; // 
+    				} // if there is a gauge, then use it
+    				else {
+        				allRivers[riverIndex].calcFlow();
+        				allRivers[riverIndex].infoContent += "<p> Recommended Lower Limit: " + allRivers[riverIndex].lowLmt;
+        				allRivers[riverIndex].infoContent += " cfs</p>";
+        				allRivers[riverIndex].infoContent += "Current Flow: " + allRivers[riverIndex].curFlow + " cfs";
         				// add the CFS to the rollover title
-        				allRivers[riverIndex][sectIndex].title += " " + allRivers[riverIndex][sectIndex].curFlow + " cfs";
-   					}; // else statement	
-        			}; // loop through sections
+        				allRivers[riverIndex].title += " " + allRivers[riverIndex].curFlow + " cfs";
+   				    }; // else statement	
         		}; // loop through rivers
         		////// Loop through river sections to create markers
-        		
+        		for (var riverIndex = 0; riverIndex < allRivers.length; riverIndex++){
+        		    createMarker(allRivers[riverIndex]);
+        		}; // loop to create river markers
         		
 		} // success
 		
@@ -129,16 +128,15 @@ function loadJSON(url, callback) {
     request.onload = function() {
         jsonRivers = request.response;
         // parse the JSON into RiverSection objects here
-        console.log(jsonRivers.length);
         for (var riverIndex = 0; riverIndex < jsonRivers.length; riverIndex++) {
 		    for (sectIndex = 0; sectIndex < jsonRivers[riverIndex].length; sectIndex++) {
 		        // if section is visual inspection, use the child architype for visual sections
-		        if (jsonRivers[riverIndex][sectIndex]["USGSsite"] == "visual") {
-		            var newSect = new visualRiverSection(jsonRivers[riverIndex][sectIndex]["pos"], jsonRivers[riverIndex][sectIndex]["title"], jsonRivers[riverIndex][sectIndex]["clabel"], jsonRivers[riverIndex][sectIndex]["rclass"], jsonRivers[riverIndex][sectIndex]["rcolor"], jsonRivers[riverIndex][sectIndex]["lowLmt"], jsonRivers[riverIndex][sectIndex]["upLmt"]);
-		            newSect.timing = jsonRivers[riverIndex][sectIndex]["timing"];
+		        if (jsonRivers[riverIndex][sectIndex]["USGSsite"][0] == "visual") {
+		            var newSect = new visualRiverSection(jsonRivers[riverIndex][sectIndex]["position"], jsonRivers[riverIndex][sectIndex]["title"], jsonRivers[riverIndex][sectIndex]["clabel"], jsonRivers[riverIndex][sectIndex]["rclass"], jsonRivers[riverIndex][sectIndex]["rcolor"], jsonRivers[riverIndex][sectIndex]["lowLmt"], jsonRivers[riverIndex][sectIndex]["upLmt"]);
+		            newSect.timing = [new Date(jsonRivers[riverIndex][sectIndex]["timing"][0]), new Date(jsonRivers[riverIndex][sectIndex]["timing"][1])];
 		            newSect.infoContent = jsonRivers[riverIndex][sectIndex]["infoContent"];
 		        } else {
-		            var newSect = new RiverSection(jsonRivers[riverIndex][sectIndex]["pos"], jsonRivers[riverIndex][sectIndex]["title"], jsonRivers[riverIndex][sectIndex]["clabel"], jsonRivers[riverIndex][sectIndex]["rclass"], jsonRivers[riverIndex][sectIndex]["rcolor"], jsonRivers[riverIndex][sectIndex]["lowLmt"], jsonRivers[riverIndex][sectIndex]["upLmt"]);
+		            var newSect = new RiverSection(jsonRivers[riverIndex][sectIndex]["position"], jsonRivers[riverIndex][sectIndex]["title"], jsonRivers[riverIndex][sectIndex]["clabel"], jsonRivers[riverIndex][sectIndex]["rclass"], jsonRivers[riverIndex][sectIndex]["rcolor"], jsonRivers[riverIndex][sectIndex]["lowLmt"], jsonRivers[riverIndex][sectIndex]["upLmt"]);
 		            newSect.USGSsite = jsonRivers[riverIndex][sectIndex]["USGSsite"];
 		            newSect.infoContent = jsonRivers[riverIndex][sectIndex]["infoContent"];
 		        };
@@ -338,8 +336,6 @@ river.markerNum = markerIndex;
 markerIndex++; // steps marker index to avoid overwriting
 } // createMarker function
 
-
-
 // create the map variable before the map initializing (making it global)
 var map;
 // initializes the map
@@ -353,9 +349,6 @@ function initMap() {
     zoom: mapZoom,
     center: mapCenter
   });
-
-// LOOP FOR CREATING MARKERS
-
 
 }; //initMap function
 
