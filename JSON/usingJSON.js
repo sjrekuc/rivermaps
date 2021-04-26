@@ -67,7 +67,6 @@ function pullUSWater(){
         		for (var riverIndex = 0; riverIndex < allRivers.length; riverIndex++){
         			// loop through all of the sections
         			for (sectIndex = 0; sectIndex < allRivers[riverIndex].length; sectIndex++) {
-        			
         				// loop through all of the gauges for a section
         				for (var i = 0; i < allRivers[riverIndex][sectIndex].USGSsite.length; i++) {
         					// check that this isn't a visual flow section
@@ -95,6 +94,9 @@ function pullUSWater(){
    					}; // else statement	
         			}; // loop through sections
         		}; // loop through rivers
+        		////// Loop through river sections to create markers
+        		
+        		
 		} // success
 		
 	}); // ajax
@@ -117,8 +119,7 @@ function downloadUrl(url, callback) {
         request.open('GET', url, true);
         request.send(null);
  }; // downloadUrl
-      
-function doNothing() {};
+
 
 function loadJSON(url, callback) {
     let request = new XMLHttpRequest();
@@ -145,6 +146,7 @@ function loadJSON(url, callback) {
 		        // access the individual section parameters
 		    }; // for loop through sections
         }; // for loop through rivers
+        LoadCOFile();
     }; // request response
 }; // loadJSON function
 
