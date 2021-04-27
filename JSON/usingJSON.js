@@ -95,9 +95,10 @@ function pullUSWater(){
         		for (var riverIndex = 0; riverIndex < allRivers.length; riverIndex++){
         		    createMarker(allRivers[riverIndex]);
         		}; // loop to create river markers
-        		
+        		// may need to call something here to create the clusters
+        		markerCluster = new MarkerClusterer(map, marker, clusterOptions);
+                markerCluster.setMaxZoom(10);
 		} // success
-		
 	}); // ajax
 	// console.log(USWaterlist);
 };
@@ -374,20 +375,6 @@ function checkFlow(riverSect){
 	}
 }; // checkFlow
 
-
-/* Old function that looped through rivers to check the flow for a particular section
-// function that checks all the sections of a particular river
-function checkRiver(river){
-	// loop through sections
-	for (var sectIndex = 0; sectIndex < river.length; sectIndex++) {
-		checkFlow(river[sectIndex]);
-	}; // for loop through sections
-}; // checkRiver function
-*/
-
-
-
-
 /* updateFlow is the master function that loops through all rivers and all sections for everything in the allRivers array. As the function loops through, it checks that the flow of each section is within the runnable flow levels for that section */
 function updateFlowMbl() {
 	currentMarkers = [];
@@ -432,9 +419,6 @@ function resetRiver(river){
 
 }; // resetRiver function
 */
-allRivers
-
-
 
 
 
@@ -456,7 +440,7 @@ document.getElementById("displayUpLmtMbl").textContent = 'VI';
 
 // loop through the rivers to reset them
 	for (var riverIndex = 0; riverIndex < allRivers.length; riverIndex++) {
-		resetRiver(allRivers[riverIndex]);
+		allRivers[riverIndex].resetSect();
 		}; // for loop through all of the rivers
 	markerCluster.clearMarkers();
 	markerCluster = new MarkerClusterer(map, marker, clusterOptions);
