@@ -83,13 +83,8 @@ function pullUSWater(){
         					}; // 
         				} // if there is a gauge, then use it
         				else {
-        				allRivers[riverIndex][sectIndex].calcFlow();
-        				allRivers[riverIndex][sectIndex].infoContent += "<p> Recommended Lower Limit: " + allRivers[riverIndex][sectIndex].lowLmt;
-        				allRivers[riverIndex][sectIndex].infoContent += " cfs</p>";
-        				allRivers[riverIndex][sectIndex].infoContent += "Current Flow: " + allRivers[riverIndex][sectIndex].curFlow + " cfs";
-        				// add the CFS to the rollover title
-        				allRivers[riverIndex][sectIndex].title += " " + allRivers[riverIndex][sectIndex].curFlow + " cfs";
-   					}; // else statement	
+        				    allRivers[riverIndex][sectIndex].calcFlow();
+   					    }; // else statement	
         			}; // loop through sections
         		}; // loop through rivers
 		} // success
@@ -1140,7 +1135,8 @@ allRivers.push(newRiver);
 // East Fork of the San Juan
 var newRiver = [];
 newRiver[0] = new RiverSection ({lat: 37.388390, lng: -106.847187}, "East Fork of the San Juan", 'III(V-)', 3.66, 'blue', 150, 500);
-newRiver[0].USGSsite = ["EASAPACO"];
+newRiver[0].USGSsite = ["visual", "EASAPACO"];
+newRiver[0].timing = [new Date("01 May " + curYear), new Date("30 June " + curYear)];
 newRiver[0].infoContent = "<h3>East Fork of the San Juan III(V-)</h3>" + "<p>Class III run with one Class V rapid to portage (or run). Portage eddy is not easy, but you can opt for lower put-in.</p>" + "<p><a href='https://www.americanwhitewater.org/content/River/detail/id/419/' target='_blank'> American Whitewater </a></p>" + "<p><a href='http://www.riverbrain.com/run/show/344' target='_blank'> River Brains </a></p>";
 allRivers.push (newRiver);
 
@@ -1200,7 +1196,8 @@ newRiver[0] = new RiverSection ({lat: 40.227493, lng: -105.348798}, "Middle Nort
 newRiver[0].USGSsite = ["NSVBBRCO"];
 newRiver[0].infoContent = "<h3>Middle North St. Vrain V-</h3>" + "<p>Just up the road from Lyons, this is a popular dam-controlleed, after-work run.</p>" + "<p><a href='https://www.americanwhitewater.org/content/River/detail/id/4050/' target='_blank'> American Whitewater </a></p>" + "<p><a href='http://www.riverbrain.com/run/show/232' target='_blank'> River Brains </a></p>";
 newRiver[1] = new RiverSection ({lat: 40.218570, lng: -105.528135}, "Upper North St. Vrain / NSV", 'V+', 5.66, 'black', 250, 900);
-newRiver[1].USGSsite = ["BRKRESCO"];
+newRiver[1].USGSsite = ["visual", "BRKRESCO"];
+newRiver[1].timing = [new Date("15 May " + curYear), new Date("31 July " + curYear)];
 newRiver[1].infoContent = "<h3>Upper North St. Vrain (NSV) V+</h3>" + "<p>Nice, challenging, wilderness run on the Front Range. </p>" + "<p><a href='https://www.americanwhitewater.org/content/River/detail/id/4049/' target='_blank'> American Whitewater </a></p>" + "<p><a href='http://www.riverbrain.com/run/show/231' target='_blank'> River Brains </a></p>";
 newRiver[2] = new RiverSection ({lat: 40.236718, lng: -105.321343}, "Lower North St. Vrain / Shelley's Cottages", 'III', 3.33, 'blue', 150, 700);
 newRiver[2].USGSsite = ["NSVBBRCO"];
