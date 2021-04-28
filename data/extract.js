@@ -3231,4 +3231,6 @@ function saveToFile() {
 
 }
 
-saveToFile()
+// need to delay the write to file to make sure everything loads
+setTimeout(saveToFile, 5000);
+
