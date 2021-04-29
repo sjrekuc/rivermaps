@@ -25,7 +25,7 @@ $usGauges[15] = '09085000';
 $usGauges[16] = '09081000';
 $usGauges[17] = '09073300';
 $usGauges[18] = '09075400';
-$usGauges[19] = '09180500';
+$usGauges[19] = '09180500'; // Colorado at Cisco, UT
 $usGauges[20] = '09163500';
 $usGauges[21] = '09095500';
 $usGauges[22] = '09085100';
@@ -51,7 +51,7 @@ $usGauges[41] = '06719505';
 $usGauges[42] = '09059500';
 $usGauges[43] = '09234500';
 $usGauges[44] = '09261000'; // Arkansas at Canon City
-$usGauges[45] = '09315000';
+$usGauges[45] = '09315000'; // Green River at Green River, UT
 $usGauges[46] = '09306290';
 $usGauges[47] = '09172500';
 $usGauges[48] = '09174600';
@@ -248,12 +248,13 @@ $usGauges[237] = '13290450'; // SNAKE RIVER AT HELLS CANYON DAM ID-OR STATE LINE
 $usGauges[238] = '13317660'; // SNAKE RIVER BL MCDUFF RAPIDS AT CHINA GARDENS, ID
 $usGauges[239] = '09076300'; // ROARING FORK RIVER BLW MAROON CREEK NR ASPEN, CO (Slaughterhouse)
 
-
-
-
+// save the flows to do some math
+$flows = array(0, 0);
+$index = 0;
 
 // loop through each gauge in the array to pull the data using foreach
 foreach ($usGauges as $site) {
+    $value = 0;
 	$url = "https://waterservices.usgs.gov/nwis/iv/?format=waterml&sites=" . $site . "&parameterCd=00060";
 	$data = file_get_contents($url);
 	if (!$data) {
@@ -269,11 +270,32 @@ foreach ($usGauges as $site) {
 		// removes commas from the number data
 		$value = str_replace(',','', $value);
 	}
+	// saves the flow
+	$flows[$index] = $value;
+	$index++;
 	// print the data out to a text file $myfile
 	$txt = $site . "=" . $value . "\n";; 
 	fwrite($myfile, $txt);
 	
 }
+
+// do some math here to calculate flows that are determined by math
+
+// cateract canyon ["09180500", "09315000"] - correspond to gauges [19, 45]
+$site = 'CATCANYON';
+$value = $flows[19] + $flows[45];
+$txt = $site . "=" . $value . "\n";;
+fwrite($myfile, $txt);
+
+// Roaring Fork at Basalt
+// used by Upper and Lower Woody Creek
+
+// Escalante Creek 
+
+// Grape Creek
+
+//
+
 
 // closes the file
 fclose($myfile);
