@@ -22,7 +22,7 @@ $usGauges[12] = '09050700';
 $usGauges[13] = '09057500';
 $usGauges[14] = '09047500';
 $usGauges[15] = '09085000';
-$usGauges[16] = '09081000';
+$usGauges[16] = '09081000'; // Roaring Fork below Basalt
 $usGauges[17] = '09073300';
 $usGauges[18] = '09075400';
 $usGauges[19] = '09180500'; // Colorado at Cisco, UT
@@ -75,7 +75,7 @@ $usGauges[65] = '09112200';
 $usGauges[66] = '09126000';
 $usGauges[67] = '09238900';
 $usGauges[68] = '06716100';
-$usGauges[69] = '09080400';
+$usGauges[69] = '09080400'; // Frying Pan above Basalt
 $usGauges[70] = '09037500';
 $usGauges[71] = '06751490';
 $usGauges[72] = '09105000';
@@ -288,13 +288,21 @@ $txt = $site . "=" . $value . "\n";;
 fwrite($myfile, $txt);
 
 // Roaring Fork at Basalt
-// used by Upper and Lower Woody Creek
+// used by Upper and Lower Woody Creek ["09081000", "09080400"];
+$site = 'RFBASALT';
+$value = $flows[16] - $flows[69];
+$txt = $site . "=" . $value . "\n";;
+fwrite($myfile, $txt);
 
-// Escalante Creek 
+// Escalante Creek [09152500 - 09144250 - 09149500]
+$site = 'ESCCREEKCO';
+$value = $flows[136] - $flows[31] - $flows[137];
+$txt = $site . "=" . $value . "\n";;
+fwrite($myfile, $txt);
 
-// Grape Creek
+// Grape Creek 
 
-//
+// Some Idaho Rivers
 
 
 // closes the file
