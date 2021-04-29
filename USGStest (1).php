@@ -1,10 +1,8 @@
 <?php
-$myfile = fopen("public_html/USWaterlog.txt", "w") or die("Unable to open file!");
+echo "Let's get this started.";
+$myfile = fopen("public_html/USWaterlog2.txt", "w") or die("Unable to open file!");
 
 // possibly read the information from the current file and save in case the ajax fails
-
-
-
 
 // create an array of USGS water guages that we want data from
 $usGauges = array('09063000', '09064600');
@@ -226,7 +224,7 @@ $usGauges[215] = '13042500'; // HENRYS FORK NR ISLAND PARK ID
 $usGauges[216] = '13046000'; // HENRYS FORK NR ASHTON ID
 $usGauges[217] = '13246000'; // NF PAYETTE RIVER NR BANKS ID
 $usGauges[218] = '13235000'; // SOUTH FORK PAYETTE RIVER AT LOWMAN, ID
-$usGauges[219] = '13236500'; // SOUTH FORK PAYETTE RIVER AT LOWMAN, ID
+$usGauges[219] = '13236500'; // SOUTH FORK PAYETTE RIVER NEAR LOWMAN, ID
 $usGauges[220] = '13247500'; // PAYETTE RIVER NR HORSESHOE BEND ID
 $usGauges[221] = '13073000'; // PORTNEUF RIVER AT TOPAZ ID
 $usGauges[222] = '12395000'; // PRIEST RIVER NR PRIEST RIVER ID
@@ -247,6 +245,11 @@ $usGauges[236] = '13172500'; // SNAKE RIVER NR MURPHY ID
 $usGauges[237] = '13290450'; // SNAKE RIVER AT HELLS CANYON DAM ID-OR STATE LINE
 $usGauges[238] = '13317660'; // SNAKE RIVER BL MCDUFF RAPIDS AT CHINA GARDENS, ID
 $usGauges[239] = '09076300'; // ROARING FORK RIVER BLW MAROON CREEK NR ASPEN, CO (Slaughterhouse)
+//$usGauges[240] = '07096000'; // ARKANSAS RIVER AT CANON CITY, CO (PLAYPARK)
+
+
+// starts the process of pulling the flows
+echo "Begins pulling water data";
 
 // save the flows to do some math
 $flows = array(0, 0);
@@ -259,6 +262,7 @@ foreach ($usGauges as $site) {
 	$data = file_get_contents($url);
 	if (!$data) {
  		$value = 0;
+ 		echo "Error";
  		// possibly write back all the existing data on the file so we don't lose it, but for now I will make it zero
 	} else {
 		// Remove the namespace prefix for easier parsing
@@ -300,11 +304,31 @@ $value = $flows[136] - $flows[31] - $flows[137];
 $txt = $site . "=" . $value . "\n";;
 fwrite($myfile, $txt);
 
-// Grape Creek 
+// // Grape Creek ["07096000", "07094500"]
+// $site = 'GRAPECRKCO';
+// $value = $flows[240] - $flows[9];
+// $txt = $site . "=" . $value . "\n";;
+// fwrite($myfile, $txt);
 
-// Some Idaho Rivers
+// South Fork Payette Canyon ["13235000", "13236500"]
+$site = 'SFPAYETTEID';
+$value = $flows[218] + $flows[219];
+$txt = $site . "=" . $value . "\n";;
+fwrite($myfile, $txt);
 
+// South Fork Payette Staircase ["13247500", "13246000"]
+$site = 'SFPAYETTESTAIRID';
+$value = $flows[220] - $flows[217];
+$txt = $site . "=" . $value . "\n";;
+fwrite($myfile, $txt);
 
 // closes the file
 fclose($myfile);
+
+// copies the txt file to the actual file we'll use. This should minimize down time
+$source = "public_html/USWaterlog2.txt";
+$destination = "public_html/USWaterlog.txt";
+$copied = copy($source, $destination);
+echo $copied;
+
 ?>
