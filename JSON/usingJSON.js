@@ -70,8 +70,8 @@ function pullUSWater(){
     					// check that this isn't a visual flow section
     					if (allRivers[riverIndex].USGSsite[i] == "visual"){}
     					else {
-    					allRivers[riverIndex].flow[i] = USWaterlist[allRivers[riverIndex].USGSsite[i]];
-    					} // else statement
+    					   allRivers[riverIndex].flow[i] = USWaterlist[allRivers[riverIndex].USGSsite[i]];
+    					    } // else statement
     					}; // loop through all of the gauges for a section
     				// check whether this is a visual flow section
     				if (allRivers[riverIndex].USGSsite[0] == "visual"){
@@ -231,6 +231,12 @@ function visualRiverSection (pos,title,clabel,rclass,rcolor,lowLmt,upLmt) {
 	RiverSection.call (this,pos,title,clabel,rclass,rcolor,lowLmt,upLmt);
 	this.USGSsite = ["visual"];
 	this.timing = [new Date("01 Jan " + curYear), new Date("31 Dec " + curYear)];
+	this.calcFlow = function (){
+	    // if there is a related flow, use it
+	    if (this.flow[1]){
+			    this.curFlow = this.flow[1];
+			    };
+	    };
 	this.runCur = function () {
 	if (includeVisual == "exclude") { 
 		this.runSect = 0;
