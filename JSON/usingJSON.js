@@ -80,8 +80,8 @@ function pullUSWater(){
     				// if statement to include a related flow
     				if (allRivers[riverIndex].USGSsite[1]) {
     					allRivers[riverIndex].infoContent += "<p> Related Flow: " + allRivers[riverIndex].curFlow + " cfs</p>";
-    					}; // 
-    				} // if there is a gauge, then use it
+    					}; // if there is a gauge, then use it
+    				} // if statement checking if it's a visual flow section
     				else {
         				allRivers[riverIndex].calcFlow();
         				allRivers[riverIndex].infoContent += "<p> Recommended Lower Limit: " + allRivers[riverIndex].lowLmt;
@@ -136,6 +136,10 @@ function loadJSON(url, callback) {
 		            var newSect = new visualRiverSection(jsonRivers[riverIndex][sectIndex]["position"], jsonRivers[riverIndex][sectIndex]["title"], jsonRivers[riverIndex][sectIndex]["clabel"], jsonRivers[riverIndex][sectIndex]["rclass"], jsonRivers[riverIndex][sectIndex]["rcolor"], jsonRivers[riverIndex][sectIndex]["lowLmt"], jsonRivers[riverIndex][sectIndex]["upLmt"]);
 		            newSect.timing = [new Date(jsonRivers[riverIndex][sectIndex]["timing"][0]), new Date(jsonRivers[riverIndex][sectIndex]["timing"][1])];
 		            newSect.infoContent = jsonRivers[riverIndex][sectIndex]["infoContent"];
+		            // statement loading the related gauge if there is one
+		            if (jsonRivers[riverIndex][sectIndex]["USGSsite"][1]){
+		                newSect.USGSsite[1] = jsonRivers[riverIndex][sectIndex]["USGSsite"][1]; // related flow to display
+		            }
 		        } else {
 		            var newSect = new RiverSection(jsonRivers[riverIndex][sectIndex]["position"], jsonRivers[riverIndex][sectIndex]["title"], jsonRivers[riverIndex][sectIndex]["clabel"], jsonRivers[riverIndex][sectIndex]["rclass"], jsonRivers[riverIndex][sectIndex]["rcolor"], jsonRivers[riverIndex][sectIndex]["lowLmt"], jsonRivers[riverIndex][sectIndex]["upLmt"]);
 		            newSect.USGSsite = jsonRivers[riverIndex][sectIndex]["USGSsite"];
