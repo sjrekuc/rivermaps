@@ -76,10 +76,10 @@ function pullUSWater(){
         				// check whether this is a visual flow section
         				if (allRivers[riverIndex][sectIndex].USGSsite[0] == "visual"){
         				allRivers[riverIndex][sectIndex].calcFlow();
-        				allRivers[riverIndex][sectIndex].infoContent += "<p> Typically run: " + months[allRivers[riverIndex][sectIndex].timing[0].getMonth()] + " "+ allRivers[riverIndex][sectIndex].timing[0].getDate() + " to " + months[allRivers[riverIndex][sectIndex].timing[1].getMonth()] + " "+ allRivers[riverIndex][sectIndex].timing[1].getDate() + "</p>";
+        				// allRivers[riverIndex][sectIndex].infoContent += "<p> Typically run: " + months[allRivers[riverIndex][sectIndex].timing[0].getMonth()] + " "+ allRivers[riverIndex][sectIndex].timing[0].getDate() + " to " + months[allRivers[riverIndex][sectIndex].timing[1].getMonth()] + " "+ allRivers[riverIndex][sectIndex].timing[1].getDate() + "</p>";
         				// if statement to include a related flow
         				if (allRivers[riverIndex][sectIndex].USGSsite[1]) {
-        					allRivers[riverIndex][sectIndex].infoContent += "<p> Related Flow: " + allRivers[riverIndex][sectIndex].curFlow + " cfs</p>";
+        					// allRivers[riverIndex][sectIndex].infoContent += "<p> Related Flow: " + allRivers[riverIndex][sectIndex].curFlow + " cfs</p>";
         					}; // 
         				} // if there is a gauge, then use it
         				else {
@@ -422,10 +422,10 @@ newRiver[2] = new RiverSection ({lat: 39.386291, lng: -107.086445}, "Catherine's
 newRiver[2].USGSsite = ["09081000"];
 newRiver[2].infoContent = "<h3>Catherine's Store II(III)</h3>" + "<p> Good beginner section with mainly Class II wave trains. However, there are a couple of diversion dams that may require Class III skills, depending on where you start this section. </p>" +  "<p><a href='http://www.riverbrain.com/run/show/97' target='_blank'> River Brains </a></p>"
 newRiver[3] = new RiverSection ({lat: 39.331597,  lng: -106.983902}, "Lower Woody Creek Canyon", 'III(+)', 3.66, 'blue', 350, 5000);
-newRiver[3].USGSsite = ["09081000", "09080400"];
-newRiver[3].calcFlow = function () {
-	this.curFlow = Number(this.flow[0]) - Number(this.flow[1]);
-	};
+newRiver[3].USGSsite = ["RFBASALT"];
+// newRiver[3].calcFlow = function () {
+// 	this.curFlow = Number(this.flow[0]) - Number(this.flow[1]);
+// 	};
 newRiver[3].rockyLmt = 600;
 newRiver[3].infoContent = "<h3>Lower Woody Creek Canyon (Toothache) III(+)</h3>" + "<p> The same general character continues from Upper Woody Creek, but the pace picks up a little and some of the rapids approach Class III+; at high-water, it's pushing a IV. Rafting companies in the area may refer to this section as 'The Upper Roaring Fork', but there is much more river above here. </p>" + "<p><a href='https://www.americanwhitewater.org/content/River/detail/id/1649/' target='_blank'> American Whitewater </a></p>" + "<p><a href='http://www.riverbrain.com/run/show/432' target='_blank'> River Brains </a></p>"
 newRiver[4] = new RiverSection ({lat: 39.258553, lng: -106.882550}, "Upper Woody Creek Canyon", 'III', 3.33, 'blue', 350, 5000);
@@ -453,12 +453,7 @@ allRivers.push(newRiver);
 // Colorado River
 var newRiver = [];
 newRiver[0] = new RiverSection ({lat: 38.507178, lng: -109.660238}, "Cataract Canyon", 'II-IV', 4.00, 'purple', 2000, 100000);
-newRiver[0].USGSsite = ["09180500", "09315000"];
-newRiver[0].calcFlow = function () {
-	if (this.flow[1] < 0 ) { 
-		this.flow[1] = 0;}
-	this.curFlow = Number(this.flow[0]) + Number(this.flow[1]);
-	};
+newRiver[0].USGSsite = ["CATCANYON"];
 newRiver[0].infoContent = "<h3>Cataract Canyon II-IV</h3>" + "<p>Big water experience in an isolated canyon. There is a larger amount of flat water on this section. Some describe it as a mini Grand Canyon, but during runnoff (May and June), it can have bigger flows than the Grand. </p>" + "<p><a href='https://www.americanwhitewater.org/content/River/detail/id/1842/' target='_blank'> American Whitewater </a></p>" + "<p><a href='http://www.riverbrain.com/run/show/2' target='_blank'> River Brains </a></p>"
 newRiver[1] = new RiverSection ({lat: 38.811041, lng: -109.305748}, "Moab Daily", 'II(III)', 2.66, 'green', 1500, 40000);
 newRiver[1].USGSsite = ["09180500"];
@@ -1134,7 +1129,7 @@ allRivers.push(newRiver);
 
 // East Fork of the San Juan
 var newRiver = [];
-newRiver[0] = new RiverSection ({lat: 37.388390, lng: -106.847187}, "East Fork of the San Juan", 'III(V-)', 3.66, 'blue', 150, 500);
+newRiver[0] = new visualRiverSection ({lat: 37.388390, lng: -106.847187}, "East Fork of the San Juan", 'III(V-)', 3.66, 'blue', 150, 500);
 newRiver[0].USGSsite = ["visual", "EASAPACO"];
 newRiver[0].timing = [new Date("01 May " + curYear), new Date("30 June " + curYear)];
 newRiver[0].infoContent = "<h3>East Fork of the San Juan III(V-)</h3>" + "<p>Class III run with one Class V rapid to portage (or run). Portage eddy is not easy, but you can opt for lower put-in.</p>" + "<p><a href='https://www.americanwhitewater.org/content/River/detail/id/419/' target='_blank'> American Whitewater </a></p>" + "<p><a href='http://www.riverbrain.com/run/show/344' target='_blank'> River Brains </a></p>";
@@ -1195,7 +1190,7 @@ var newRiver = [];
 newRiver[0] = new RiverSection ({lat: 40.227493, lng: -105.348798}, "Middle North St. Vrain", 'V-', 5.00, 'red', 250, 900);
 newRiver[0].USGSsite = ["NSVBBRCO"];
 newRiver[0].infoContent = "<h3>Middle North St. Vrain V-</h3>" + "<p>Just up the road from Lyons, this is a popular dam-controlleed, after-work run.</p>" + "<p><a href='https://www.americanwhitewater.org/content/River/detail/id/4050/' target='_blank'> American Whitewater </a></p>" + "<p><a href='http://www.riverbrain.com/run/show/232' target='_blank'> River Brains </a></p>";
-newRiver[1] = new RiverSection ({lat: 40.218570, lng: -105.528135}, "Upper North St. Vrain / NSV", 'V+', 5.66, 'black', 250, 900);
+newRiver[1] = new visualRiverSection ({lat: 40.218570, lng: -105.528135}, "Upper North St. Vrain / NSV", 'V+', 5.66, 'black', 250, 900);
 newRiver[1].USGSsite = ["visual", "BRKRESCO"];
 newRiver[1].timing = [new Date("15 May " + curYear), new Date("31 July " + curYear)];
 newRiver[1].infoContent = "<h3>Upper North St. Vrain (NSV) V+</h3>" + "<p>Nice, challenging, wilderness run on the Front Range. </p>" + "<p><a href='https://www.americanwhitewater.org/content/River/detail/id/4049/' target='_blank'> American Whitewater </a></p>" + "<p><a href='http://www.riverbrain.com/run/show/231' target='_blank'> River Brains </a></p>";
@@ -1304,11 +1299,9 @@ var newRiver = [];
 newRiver[0] = new visualRiverSection ({lat: 38.6363511, lng: -108.3991558}, "Escalante Creek", 'V(+)', 5.33, 'red', 800, 1000);
 newRiver[0].timing = [new Date("10 April " + curYear), new Date("31 May " + curYear)];
 newRiver[0].infoContent += "Section that does not have a gauge; you will have to estimate the flow. Range of dates is when this section is possible. You may be able to estimate this run off of a calculation (Gunny at Grand Junction minus Gunny at Delta minus Uncompahgre at Delta); we calculated this flow below. It should be between 800-1000 ideally." + "<p><a href='https://www.americanwhitewater.org/content/River/detail/id/3410' target='_blank'> American Whitewater </a></p>" + "<p><a href='http://www.riverbrain.com/run/show/392' target='_blank'> River Brain </a></p>" + "<p><a href='https://www.amazon.com/Colorado-Rivers-Creeks-Gordon-Banks/dp/0964539950' target='_blank'> Colorado Rivers and Creeks p. 140</a></p>";
-newRiver[0].USGSsite[1] = "09152500"; // Gunnison at Grand Junction
-newRiver[0].USGSsite[2] = "09144250"; // GUNNISON RIVER AT DELTA, CO
-newRiver[0].USGSsite[3] = "09149500"; // UNCOMPAHGRE RIVER AT DELTA, CO
+newRiver[0].USGSsite[1] = "ESCCREEKCO"; // math already done on the backend
 newRiver[0].calcFlow = function (){
-	this.curFlow = this.flow[1] - this.flow[2] - this.flow[3];
+	this.curFlow = this.flow[1];
 	}; // redefining calcFlow Function
 allRivers.push (newRiver);
 
@@ -2779,38 +2772,31 @@ Owyhee River https://www.americanwhitewater.org/content/River/detail/id/4143/
 var newRiver = [];
 // Payette, S. Fork, Idaho, 2 - Deadwood River to Danskin Station (The Canyon)
 newRiver[0] = new RiverSection ({lat: 44.079502, lng: -115.658416}, "South Fork Payette: The Canyon", 'III(IV)', 3.66, 'blue', 330, 5000);
-newRiver[0].USGSsite = ["13235000", "13236500"];
-newRiver[0].calcFlow = function () {
-	this.curFlow = Number(this.flow[0]) + Number(this.flow[1]);
-	};
+newRiver[0].USGSsite = ["SFPAYETTEID"]; // ["13235000", "13236500"];
+// newRiver[0].calcFlow = function () {
+// 	this.curFlow = Number(this.flow[0]) + Number(this.flow[1]);
+// 	};
 newRiver[0].infoContent += "<p><a href='https://www.americanwhitewater.org/content/River/detail/id/594/' target='_blank'> American Whitewater</a></p>";
 
 // Payette, S. Fork, Idaho, 3. Swirly Canyon (Danskin Station to Alder Creek Bridge)
 newRiver[1] = new RiverSection ({lat: 44.044030, lng: -115.856964}, "South Fork Payette: Swirly Canyon", 'II-III', 3.00, 'blue', 330, 6000);
-newRiver[1].USGSsite = ["13235000", "13236500"];
-newRiver[1].calcFlow = function () {
-	this.curFlow = Number(this.flow[0]) + Number(this.flow[1]);
-	};
+newRiver[1].USGSsite = ["SFPAYETTEID"]; // ["13235000", "13236500"];
+// newRiver[1].calcFlow = function () {
+// 	this.curFlow = Number(this.flow[0]) + Number(this.flow[1]);
+// 	};
 newRiver[1].infoContent += "<p><a href='https://www.americanwhitewater.org/content/River/detail/id/4121/' target='_blank'> American Whitewater</a></p>";
 
 // Payette, S. Fork, Idaho, 4 - The Staircase Run (Deer Creek Ramp to Banks)
 newRiver[2] = new RiverSection ({lat: 44.091740, lng: -116.032155}, "South Fork Payette: The Staircase Run", 'IV', 4.33, 'purple', 410, 10500);
-newRiver[2].USGSsite = ["13247500", "13246000"];
-newRiver[2].calcFlow = function () {
-	this.curFlow = Number(this.flow[0]) - Number(this.flow[1]);
-	};
+newRiver[2].USGSsite = ["SFPAYETTESTAIRID"]; // ["13247500", "13246000"];
+// newRiver[2].calcFlow = function () {
+// 	this.curFlow = Number(this.flow[0]) - Number(this.flow[1]);
+// 	};
 newRiver[2].infoContent += "<p><a href='https://www.americanwhitewater.org/content/River/detail/id/4121/' target='_blank'> American Whitewater</a></p>";
-
 
 allRivers.push (newRiver); 
 
-
-
-
-
-
 // add from XML file
-
 
 // initializes the clustering
 var markerCluster = new Object();
