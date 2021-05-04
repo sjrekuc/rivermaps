@@ -66,8 +66,6 @@ function LoadCOFile() {
 }; // LoadCOFile function
 
 // Pull water may have to be written to take an input.....just like the functions used to adjust for difficulty
-
-
 // Pull USGS Function
 function pullUSWater(){
 	var strRawContents
@@ -80,48 +78,53 @@ function pullUSWater(){
         			var tempArr = arrLines[i].split("=");
         			USWaterlist[tempArr[0]] = Number(tempArr[1]);
         		};
-        		console.log(USWaterlist);
-        		
-        		///// need to figure out a way to exclude the sections that do not have a gauge
-        		
-        		
-        		// for loop through all sections to update data and put in info markers
-        		for (var riverIndex = 0; riverIndex < allRivers.length; riverIndex++){
-    				// loop through all of the gauges for a section
-    				for (var i = 0; i < allRivers[riverIndex].USGSsite.length; i++) {
-    					// check that this isn't a visual flow section
-    					if (allRivers[riverIndex].USGSsite[i] == "visual"){}
-    					else {
-    					   allRivers[riverIndex].flow[i] = USWaterlist[allRivers[riverIndex].USGSsite[i]];
-    					    } // else statement
-    					}; // loop through all of the gauges for a section
-    				// check whether this is a visual flow section
-    				if (allRivers[riverIndex].USGSsite[0] == "visual"){
-    				    allRivers[riverIndex].calcFlow();
-    				    allRivers[riverIndex].infoContent += "<p> Typically run: " + months[allRivers[riverIndex].timing[0].getMonth()] + " "+ allRivers[riverIndex].timing[0].getDate() + " to " + months[allRivers[riverIndex].timing[1].getMonth()] + " "+ allRivers[riverIndex].timing[1].getDate() + "</p>";
-    				// if statement to include a related flow
-    				if (allRivers[riverIndex].USGSsite[1]) {
-    					allRivers[riverIndex].infoContent += "<p> Related Flow: " + allRivers[riverIndex].curFlow + " cfs</p>";
-    					}; // if there is a gauge, then use it
-    				} // if statement checking if it's a visual flow section
-    				else {
-        				allRivers[riverIndex].calcFlow();
-        				allRivers[riverIndex].infoContent += "<p> Recommended Lower Limit: " + allRivers[riverIndex].lowLmt;
-        				allRivers[riverIndex].infoContent += " cfs</p>";
-        				allRivers[riverIndex].infoContent += "Current Flow: " + allRivers[riverIndex].curFlow + " cfs";
-        				// add the CFS to the rollover title
-        				allRivers[riverIndex].title += " " + allRivers[riverIndex].curFlow + " cfs";
-   				    }; // else statement	
-        		}; // loop through rivers
-        		////// Loop through river sections to create markers
-        		for (var riverIndex = 0; riverIndex < allRivers.length; riverIndex++){
-        		    createMarker(allRivers[riverIndex]);
-        		}; // loop to create river markers
-        		// may need to call something here to create the clusters
-        		markerCluster = new MarkerClusterer(map, marker, clusterOptions);
-                markerCluster.setMaxZoom(10);
+        		// load JSON data
+        		loadJSON('http://rivermaps.co/rivers.json')
 		} // success
 	}); // ajax
+}; // pullUSWater function
+		
+
+
+
+
+// Checks Water for reach gauge
+function checkUSWater(){
+	// for loop through all sections to update data and put in info markers
+	for (var riverIndex = 0; riverIndex < allRivers.length; riverIndex++){
+		// loop through all of the gauges for a section
+		for (var i = 0; i < allRivers[riverIndex].USGSsite.length; i++) {
+			// check that this isn't a visual flow section
+			if (allRivers[riverIndex].USGSsite[i] == "visual"){}
+			else {
+			   allRivers[riverIndex].flow[i] = USWaterlist[allRivers[riverIndex].USGSsite[i]];
+			    } // else statement
+			}; // loop through all of the gauges for a section
+		// check whether this is a visual flow section
+		if (allRivers[riverIndex].USGSsite[0] == "visual"){
+		    allRivers[riverIndex].calcFlow();
+		    allRivers[riverIndex].infoContent += "<p> Typically run: " + months[allRivers[riverIndex].timing[0].getMonth()] + " "+ allRivers[riverIndex].timing[0].getDate() + " to " + months[allRivers[riverIndex].timing[1].getMonth()] + " "+ allRivers[riverIndex].timing[1].getDate() + "</p>";
+		// if statement to include a related flow
+		if (allRivers[riverIndex].USGSsite[1]) {
+			allRivers[riverIndex].infoContent += "<p> Related Flow: " + allRivers[riverIndex].curFlow + " cfs</p>";
+			}; // if there is a gauge, then use it
+		} // if statement checking if it's a visual flow section
+		else {
+			allRivers[riverIndex].calcFlow();
+			allRivers[riverIndex].infoContent += "<p> Recommended Lower Limit: " + allRivers[riverIndex].lowLmt;
+			allRivers[riverIndex].infoContent += " cfs</p>";
+			allRivers[riverIndex].infoContent += "Current Flow: " + allRivers[riverIndex].curFlow + " cfs";
+			// add the CFS to the rollover title
+			allRivers[riverIndex].title += " " + allRivers[riverIndex].curFlow + " cfs";
+   	    }; // else statement	
+	}; // loop through rivers
+	////// Loop through river sections to create markers
+	for (var riverIndex = 0; riverIndex < allRivers.length; riverIndex++){
+	    createMarker(allRivers[riverIndex]);
+	}; // loop to create river markers
+	// may need to call something here to create the clusters
+	markerCluster = new MarkerClusterer(map, marker, clusterOptions);
+    markerCluster.setMaxZoom(10);
 	// console.log(USWaterlist);
 };
 
@@ -143,17 +146,23 @@ function loadJSON(url, callback) {
 		            // statement loading the related gauge if there is one
 		            if (jsonRivers[riverIndex][sectIndex]["USGSsite"][1]){
 		                newSect.USGSsite[1] = jsonRivers[riverIndex][sectIndex]["USGSsite"][1]; // related flow to display
-		            }
-		        } else {
+		            };
+		            allRivers.push(newSect);
+		            /// make this an elseif to see if that gauge used in that section is included in our list of gauges that we have in our prediction file. Load this list from the CSV of just gauges.
+		            /// use this list to also add a link the the appropriate gauge page.
+		        } else if (jsonRivers[riverIndex][sectIndex]["USGSsite"] in USWaterlist){
 		            var newSect = new RiverSection(jsonRivers[riverIndex][sectIndex]["position"], jsonRivers[riverIndex][sectIndex]["title"], jsonRivers[riverIndex][sectIndex]["clabel"], jsonRivers[riverIndex][sectIndex]["rclass"], jsonRivers[riverIndex][sectIndex]["rcolor"], jsonRivers[riverIndex][sectIndex]["lowLmt"], jsonRivers[riverIndex][sectIndex]["upLmt"]);
 		            newSect.USGSsite = jsonRivers[riverIndex][sectIndex]["USGSsite"];
+		            
+		            // add link to NOAA prediction site to the end of the infoContent section
+		            
 		            newSect.infoContent = jsonRivers[riverIndex][sectIndex]["infoContent"];
+		            allRivers.push(newSect);
 		        };
-		        allRivers.push(newSect);
 		        // access the individual section parameters
 		    }; // for loop through sections
         }; // for loop through rivers
-        pullUSWater();
+        checkUSWater()
     }; // request response
 }; // loadJSON function
 
@@ -271,7 +280,7 @@ visualRiverSection.prototype = Object.create(RiverSection.prototype);
 
 ///////////////////////////// River data that was hard-coded in JS was here ////////////////////////////
 
-loadJSON('http://rivermaps.co/rivers.json')
+pullUSWater();
 
 // initializes the clustering
 var markerCluster = new Object();
