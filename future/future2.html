@@ -25,12 +25,11 @@
 <! cluster JS Code from Google>
 <script src="https://developers.google.com/maps/documentation/javascript/examples/markerclusterer/markerclusterer.js">
 </script>
-<! this contains all of my JS code>
-<script type="text/javascript" src="future.js"></script>
 <! API Call for Google Maps; placed below my code to make sure initMaps function is defined>
 <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyChKhMLyzg_dJYipHfbzo1QK7qbPW869WY&callback=initMap" async="" defer="" id="map">
 </script>
-
+<! this contains all of my JS code>
+<script type="text/javascript" src="future.js"></script>
 
 
 
@@ -46,12 +45,12 @@
 <col width="120">
 
 <tr>
-<td>
+<td> <script>pullUSWater(1);</script>
 </td>
 <td>
-<select id="select-day" oninput="pullUSWater(value);">
+<select id="select-day" onchange=window.open("http://rivermaps.co/future.html")>
     <option id="day0" value="0">1 day</option>
-    <option id="day1" value="1">2 day</option>
+    <option id="day1" value="1" selected>2 day</option>
     <option id="day2" value="2">3 day</option>
     <option id="day3" value="3">4 day</option>
     <option id="day4" value="4">5 day</option>
@@ -130,6 +129,8 @@
 <span class="bottom-smallscreen"> <input onclick="resetMarkers();" type="button" value="RESET"/> </span>
 
 <! -- Likely have to write these JS functions again for the mobile version -->
+
+
 
 </body>
 </html>

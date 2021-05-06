@@ -6,27 +6,43 @@ var includeVisual = "timing";
 var curDate = new Date();
 var curYear = curDate.getFullYear();
 var months = ["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"];
+var weekdays = ["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday", "Sunday"];
 var jsonRivers;
 var allRivers = [];
-
 var markerCluster;
 
 // sets the max info window width to 100 less than the screen width - keeps the info window inside the screen
 var infoMaxWidth = window.innerWidth - 100; 
 
-futureDays = [];
+nDays = [];
+fDays = [];
 // create function that writes an array of file names for future days
-function futuerDays(date){
-    var curDay = curDate.getDate() + 1;
-    var curWeekday = curDate.getDay();
-    var curMonth = curDate.getMonth() + 1; // month starts at 0, so we have to add 1 to it
+function futureDays(){
+    // var curDay = date.getDate();
     for (i=0; i < 10; i++){
-        day = curDay + i;
-        futureDays[i] = "ready_" + curMonth + "_" + day + "_" + curYear + ".csv"
+        var fDate = new Date();
+        fDate.setDate(curDate.getDate() + 1 + i)
+        var day = fDate.getDate();
+        var curWeekday = fDate.getDay();
+        var curMonth = fDate.getMonth() + 1; // month starts at 0, so we have to add 1 to it
+        // fDays is the file name to use for each future day
+        fDays[i] = "ready_" + curMonth + "_" + day + "_" + curYear + ".csv";
+        // nDays is the name of the days to display in HTML
+        nDays[i] = weekdays[curWeekday] + ", " + months[fDate.getMonth()] + " " + day + ", " + curYear;
     }
 }
+futureDays();
 
-futuerDays(curDate);
+// need to delay the write to file to make sure everything loads in HTML
+setTimeout(renameDays, 3000);
+
+function renameDays () {// sets up the future days in the select menu
+    for (i=0; i < fDays.length; i++){
+        id = "day" + i;
+        document.getElementById(id).text = nDays[i];
+    };
+    console.log(document.getElementById('select-day').value);
+}// document.getElementById("apple").text = "newTextForApple";}
 
 // these info listeners are on each map marker
 function addInfoListener(mark, markIndex, Sect) {
@@ -65,12 +81,15 @@ function LoadCOFile() {
 	}); // ajax
 }; // LoadCOFile function
 
+
+
 // Pull water may have to be written to take an input.....just like the functions used to adjust for difficulty
 // Pull USGS Function
-function pullUSWater(){
+function pullUSWater(j){
 	var strRawContents
+	var file = "/NOAA/" + fDays[j];
 	$.ajax({
-		url: "/NOAA/ready_5_3_2021.csv",
+		url: file,
 		success: function(data){
 			strRawContents = data;
 			var arrLines = strRawContents.split("\n");
@@ -78,15 +97,16 @@ function pullUSWater(){
         			var tempArr = arrLines[i].split("=");
         			USWaterlist[tempArr[0]] = Number(tempArr[1]);
         		};
-        		// load JSON data
-        		loadJSON('http://rivermaps.co/rivers.json')
+        		// load JSON data - IF river data is empty; else just checkUSWater
+        		if (allRivers.length < 1){
+        		    loadJSON('http://rivermaps.co/rivers.json');
+        		} else {
+        		    checkUSWater();
+        		} // if statement whether to load river data or not
 		} // success
 	}); // ajax
 }; // pullUSWater function
 		
-
-
-
 
 // Checks Water for reach gauge
 function checkUSWater(){
@@ -118,14 +138,36 @@ function checkUSWater(){
 			allRivers[riverIndex].title += " " + allRivers[riverIndex].curFlow + " cfs";
    	    }; // else statement	
 	}; // loop through rivers
-	////// Loop through river sections to create markers
+	// need to loop through the markers to remove them from the map
+	if (marker.length > 0) {
+	    markerCluster.clearMarkers();
+	    for (let i = 0; i < marker.length; i++) {
+            marker[i].setMap(null);
+        }
+        // markerCluster.setMap(null);
+	}
+	
+	if (currentMarkers.length > 0){
+	    markerCluster.clearMarkers();
+	    for (let i = 0; i < currentMarkers.length; i++) {
+            currentMarkers[i].setMap(null);
+	    }
+	}
+	
+	// clear the marker variables
+	currentMarkers = [];
+	marker = [];
+    var infoWindow = [];
+    var markerIndex = 0;
+    console.log(markerCluster)
+	
+    ////// Loop through river sections to create markers
 	for (var riverIndex = 0; riverIndex < allRivers.length; riverIndex++){
 	    createMarker(allRivers[riverIndex]);
 	}; // loop to create river markers
 	// may need to call something here to create the clusters
 	markerCluster = new MarkerClusterer(map, marker, clusterOptions);
     markerCluster.setMaxZoom(10);
-	// console.log(USWaterlist);
 };
 
 function loadJSON(url, callback) {
@@ -162,7 +204,7 @@ function loadJSON(url, callback) {
 		        // access the individual section parameters
 		    }; // for loop through sections
         }; // for loop through rivers
-        checkUSWater()
+        checkUSWater();
     }; // request response
 }; // loadJSON function
 
@@ -280,7 +322,6 @@ visualRiverSection.prototype = Object.create(RiverSection.prototype);
 
 ///////////////////////////// River data that was hard-coded in JS was here ////////////////////////////
 
-pullUSWater();
 
 // initializes the clustering
 var markerCluster = new Object();
@@ -307,6 +348,8 @@ var iconScale = 18;
 var iconStroke = 3;
 // opacity of the icons
 var iconOpacity = 0.65;
+
+//pullUSWater(0);
 
 /// New createMarker function: take in a river section and puts that 1 marker on the map; feeds the river array with the corresponding marker index
 function createMarker(river){
