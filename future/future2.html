@@ -48,17 +48,17 @@
 <td> <script>pullUSWater(1);</script>
 </td>
 <td>
-<select id="select-day" onchange=window.open("http://rivermaps.co/future.html")>
-    <option id="day0" value="0">1 day</option>
-    <option id="day1" value="1" selected>2 day</option>
-    <option id="day2" value="2">3 day</option>
-    <option id="day3" value="3">4 day</option>
-    <option id="day4" value="4">5 day</option>
-    <option id="day5" value="5">6 day</option>
-    <option id="day6" value="6">7 day</option>
-    <option id="day7" value="7">8 day</option>
-    <option id="day8" value="8">9 day</option>
-    <option id="day9" value="9">10 day</option>
+<select id="select-day" onchange=window.open(this.options[this.selectedIndex].value)>
+    <option id="day0" value="http://rivermaps.co/future.html">1 day</option>
+    <option id="day1" value="http://rivermaps.co/future2.html" selected>2 day</option>
+    <option id="day2" value="http://rivermaps.co/future3.html">3 day</option>
+    <option id="day3" value="http://rivermaps.co/future4.html">4 day</option>
+    <option id="day4" value="http://rivermaps.co/future5.html">5 day</option>
+    <option id="day5" value="http://rivermaps.co/future6.html">6 day</option>
+    <option id="day6" value="http://rivermaps.co/future7.html">7 day</option>
+    <option id="day7" value="http://rivermaps.co/future8.html">8 day</option>
+    <option id="day8" value="http://rivermaps.co/future9.html">9 day</option>
+    <option id="day9" value="http://rivermaps.co/future10.html">10 day</option>
 </select>
 </td>
 <td>

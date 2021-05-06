@@ -25,12 +25,11 @@
 <! cluster JS Code from Google>
 <script src="https://developers.google.com/maps/documentation/javascript/examples/markerclusterer/markerclusterer.js">
 </script>
-<! this contains all of my JS code>
-<script type="text/javascript" src="future.js"></script>
 <! API Call for Google Maps; placed below my code to make sure initMaps function is defined>
 <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyChKhMLyzg_dJYipHfbzo1QK7qbPW869WY&callback=initMap" async="" defer="" id="map">
 </script>
-
+<! this contains all of my JS code>
+<script type="text/javascript" src="future.js"></script>
 
 
 
@@ -46,14 +45,14 @@
 <col width="120">
 
 <tr>
-<td> <script>pullUSWater(0);</script>
+<td> <script>pullUSWater(3);</script>
 </td>
 <td>
 <select id="select-day" onchange=window.open(this.options[this.selectedIndex].value)>
-    <option id="day0" value="http://rivermaps.co/future.html" selected>1 day</option>
+    <option id="day0" value="http://rivermaps.co/future.html">1 day</option>
     <option id="day1" value="http://rivermaps.co/future2.html">2 day</option>
     <option id="day2" value="http://rivermaps.co/future3.html">3 day</option>
-    <option id="day3" value="http://rivermaps.co/future4.html">4 day</option>
+    <option id="day3" value="http://rivermaps.co/future4.html" selected>4 day</option>
     <option id="day4" value="http://rivermaps.co/future5.html">5 day</option>
     <option id="day5" value="http://rivermaps.co/future6.html">6 day</option>
     <option id="day6" value="http://rivermaps.co/future7.html">7 day</option>
@@ -130,6 +129,8 @@
 <span class="bottom-smallscreen"> <input onclick="resetMarkers();" type="button" value="RESET"/> </span>
 
 <! -- Likely have to write these JS functions again for the mobile version -->
+
+
 
 </body>
 </html>
