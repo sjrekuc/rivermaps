@@ -7,14 +7,14 @@ import shutil
 ## import list of gauges and corresponding names in NOAA that we want to use
 USGS_gauges = []
 NOAA_gauges = []
-with open('USGS_NOAA.csv', 'r') as fi:
+with open('NOAA/USGS_NOAA.csv', 'r') as fi:
 	lines = fi.readlines()
 	for line in lines:
-		info = line.replace('\n', '').split(',')
-		USGS_gauges.append(info[0])
-		NOAA_gauges.append(info[1])
+	    info = line.replace('\n', '').split(',')
+	    USGS_gauges.append(info[0])
+	    NOAA_gauges.append(info[1].replace('\r','').replace(' ', ''))
 
-## I'm thinking list of tuples; each tuple is USGS number and NOAA name for that gauge
+print(NOAA_gauges)
 # USGS_gauges = ["09067020", "09057500"]
 # NOAA_gauges = ["EALC2", "BGMC2"]
 ## start with Eagle at Avon and Blue below Green Mountain Res.
@@ -22,7 +22,7 @@ with open('USGS_NOAA.csv', 'r') as fi:
 
 #### write for loop that loops through each gauge starting here
 for NOAA in NOAA_gauges:
-	raw_file = NOAA + '.csv'
+	raw_file = 'NOAA/' + NOAA + '.csv'
 	# get daily snow data from USDA
 	url='https://www.cbrfc.noaa.gov/product/hydrofcst/RVFCSV/' + NOAA + '.fflw24.csv'
 	response = requests.get(url)
@@ -35,7 +35,7 @@ for NOAA in NOAA_gauges:
 gauge_index = 0
 file_names = set()
 for NOAA in NOAA_gauges:
-	raw_file = NOAA + '.csv'
+	raw_file = 'NOAA/' + NOAA + '.csv'
 	fi = open(raw_file, 'r')
 	lines = fi.readlines()
 	# counter for lines in the file
@@ -71,5 +71,5 @@ for NOAA in NOAA_gauges:
 
 # replace all of the old date files with the new ones - so that we don't have down time without this data available.
 for file in file_names:
-	shutil.copyfile(file, "ready_" + file)
+	shutil.copyfile(file, "public_html/NOAA/ready_" + file)
 
