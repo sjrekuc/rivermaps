@@ -2,6 +2,8 @@
 // Purpose: extracts water data from Colorado Division of Water Resources
 // apiKey=qf6%2BUXIOXp4%2BJyTpjOGmFayiG8NsZD69
 
+echo "What's going on? \n";
+
 $apiKey = "&apiKey=qf6%2BUXIOXp4%2BJyTpjOGmFayiG8NsZD69";
 
 
@@ -34,7 +36,8 @@ $usGauges[21] = 'RCKTARCO'; // ROCK CREEK ABOVE CONFLUENCE WITH TARRYALL CREEK
 $usGauges[22] = 'BCRMORCO'; // BEAR CREEK AT MORRISON 
 $usGauges[23] = 'FRYTHOCO'; // Frying Pan above Ruedi Res
 $usGauges[24] = 'ARKWELCO'; // Arkansas above Wellsville
-$usGauges[25] = 'BOCMIDCO'; // MIDDLE BOULDER CREEK AT NEDERLAND (BOCMIDCO)
+$usGauges[25] = 'BOCMIDCO'; // MIDDLE BOULDER CREEK AT NEDERLAND (BOCMIDCO) 
+$usGauges[26] = 'GRABDWCO0'; // Grape Creek Below DeWeese Reservoir
 
 //$usGauges[26] = 'BRKRESCO'; // NORTH SAINT VRAIN CREEK ABOVE BUTTONROCK (RALPH PRICE) RESERVOIR - does not work any more
 
@@ -47,6 +50,7 @@ for ($i = 0; $i < count($usGauges); $i++){
     // checks that we actually get data	
     if (!$data){
         $result = $site . "=0" . "\n";
+        echo "failed " . $site . "\n";
     } else {
     
         $xml_tree = simplexml_load_string($data);
