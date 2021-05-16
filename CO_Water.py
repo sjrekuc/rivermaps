@@ -8,7 +8,7 @@ apiKey = "&apiKey=qf6%2BUXIOXp4%2BJyTpjOGmFayiG8NsZD69"
 url = 'https://dwr.state.co.us/Rest/GET/api/v2/telemetrystations/telemetrystation/?format=json&abbrev='
 
 # filename
-fo = 'COWaterlog.txt'
+fo = 'public_html/COWaterlog.txt'
 
 # dictionary of CO Water Gauges
 water = {
@@ -55,7 +55,7 @@ for g in water.keys():
 		print(r.status_code)
 
 # write that data to the appropriate file in the correct format
-with open(fo, mode='w', newline='') as csv:
+with open(fo, mode='w') as csv:
 	# fieldnames = water.keys()
 	# writer = csv.DictWriter(csv_combo, fieldnames=fieldnames)
 	# writer = csv.writer(csv_combo)
