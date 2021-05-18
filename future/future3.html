@@ -125,8 +125,28 @@
 <input type="range" min="2.06" max="6.06" value="6.06" step="0.33" id="upperLimitMbl" oninput="updateDiffMbl();"/>
 </td>
 </tr>
+<tr>
+    <td></td>
+    <td><input onclick="resetMarkers();" type="button" value="RESET"/></td>
+    <td></td>
+    <td></td>
+    <td>
+        <select id="select-day-mbl" onchange=window.open(this.options[this.selectedIndex].value)>
+        <option id="day0m" value="http://rivermaps.co/future.html">1 day</option>
+        <option id="day1m" value="http://rivermaps.co/future2.html">2 day</option>
+        <option id="day2m" value="http://rivermaps.co/future3.html" selected>3 day</option>
+        <option id="day3m" value="http://rivermaps.co/future4.html">4 day</option>
+        <option id="day4m" value="http://rivermaps.co/future5.html">5 day</option>
+        <option id="day5m" value="http://rivermaps.co/future6.html">6 day</option>
+        <option id="day6m" value="http://rivermaps.co/future7.html">7 day</option>
+        <option id="day7m" value="http://rivermaps.co/future8.html">8 day</option>
+        <option id="day8m" value="http://rivermaps.co/future9.html">9 day</option>
+        <option id="day9m" value="http://rivermaps.co/future10.html">10 day</option>
+        </select>
+    </td>
+</tr>
 </table>
-<span class="bottom-smallscreen"> <input onclick="resetMarkers();" type="button" value="RESET"/> </span>
+<!--<span class="bottom-smallscreen"> <input onclick="resetMarkers();" type="button" value="RESET"/> </span>-->
 
 <! -- Likely have to write these JS functions again for the mobile version -->
 
