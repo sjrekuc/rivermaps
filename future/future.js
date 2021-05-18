@@ -39,7 +39,9 @@ setTimeout(renameDays, 3000);
 function renameDays () {// sets up the future days in the select menu
     for (i=0; i < fDays.length; i++){
         id = "day" + i;
+        idm = "day" + i + "m";
         document.getElementById(id).text = nDays[i];
+        document.getElementById(idm).text = nDays[i];
     };
     console.log(document.getElementById('select-day').value);
 }// document.getElementById("apple").text = "newTextForApple";}
@@ -159,7 +161,6 @@ function checkUSWater(){
 	marker = [];
     var infoWindow = [];
     var markerIndex = 0;
-    console.log(markerCluster)
 	
     ////// Loop through river sections to create markers
 	for (var riverIndex = 0; riverIndex < allRivers.length; riverIndex++){
@@ -168,6 +169,7 @@ function checkUSWater(){
 	// may need to call something here to create the clusters
 	markerCluster = new MarkerClusterer(map, marker, clusterOptions);
     markerCluster.setMaxZoom(10);
+    console.log(marker.length)
 };
 
 function loadJSON(url, callback) {
