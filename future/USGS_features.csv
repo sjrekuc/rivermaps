@@ -1,0 +1,374 @@
+,NOAA_gauge,River,State,Elevation,Segment,USGS_link,usgs,lat,long,alt,basin
+0,SPRA3,San Pedro ,AZ,2820.0,7,http://waterdata.usgs.gov/az/nwis/uv?09472050,09472050,32.44618273,110.4884183,2820.0,Lower San Pedro
+5,AFHA3,Agua Fria ,AZ,4400.0,17,http://waterdata.usgs.gov/az/nwis/uv?09512450,09512450,34.48527778,112.2375,4400.0,Agua Fria
+6,AFMA3,Agua Fria ,AZ,3434.0,18,http://waterdata.usgs.gov/az/nwis/uv?09512500,09512500,34.3153073,112.0640455,3434.0,Agua Fria
+7,AFRA3,Agua Fria ,AZ,1800.0,19,http://waterdata.usgs.gov/az/nwis/uv?09512800,09512800,34.01558948,112.1679378,1800.0,Agua Fria
+10,ATPA3,Altar Wash ,AZ,2975.0,24,http://waterdata.usgs.gov/az/nwis/uv?09486800,09486800,31.83897238,111.4042694,2975.15,Brawley Wash
+11,AFPU1,American Fork ,UT,5950.0,11,http://waterdata.usgs.gov/ut/nwis/uv?10164500,10164500,40.4477297,111.6821472,5950.0,Utah Lake
+12,ARFN5,Animas ,NM,5280.0,18,http://waterdata.usgs.gov/nm/nwis/uv?09364500,09364500,36.7225,108.20175,5280.0,Animas
+13,CDRC2,Animas ,CO,5960.0,17,http://waterdata.usgs.gov/co/nwis/uv?09363500,09363500,37.03656944,107.8753333,5960.0,Animas
+14,DGOC2,Animas ,CO,6437.0,13,http://waterdata.usgs.gov/co/nwis/uv?09362520,09362520,37.24926389,107.8725833,6437.4,Animas
+15,DRGC2,Animas ,CO,6502.0,12,http://waterdata.usgs.gov/co/nwis/uv?09361500,09361500,37.2791688,107.8803445,6501.57,Animas
+16,ACSC2,Anthracite Ck ,CO,6280.0,24,http://waterdata.usgs.gov/co/nwis/uv?09132095,09132095,38.9372222,107.3583333,6280.0,North Fork Gunnison
+17,ARVA3,Aravaipa Ck ,AZ,2345.0,8,http://waterdata.usgs.gov/az/nwis/uv?09473000,09473000,32.84423324,110.6301,2320.0,Lower San Pedro
+18,ACJU1,Ashley Ck ,UT,4740.0,4,http://waterdata.usgs.gov/ut/nwis/uv?09271550,09271550,40.35801805,109.387631,4740.0,Ashley-Brush
+19,ASHU1,Ashley Ck ,UT,6231.0,3,http://waterdata.usgs.gov/ut/nwis/uv?09266500,09266500,40.57745816,109.6220859,6230.61,Ashley-Brush
+20,BABA3,Babocomari ,AZ,3980.0,4,http://waterdata.usgs.gov/az/nwis/uv?09471400,09471400,31.70027778,110.2263889,3980.0,Upper San Pedro
+21,BCNU1,Bear ,UT,4205.0,31,http://waterdata.usgs.gov/ut/nwis/uv?10126000,10126000,41.5763213,112.100782,4204.6,Lower Bear-Malad
+22,BEAI1,Bear ,ID,5630.0,18,http://waterdata.usgs.gov/id/nwis/uv?10079500,10079500,42.64492008,111.6982833,5650.0,Middle Bear
+23,BEAW4,Bear ,WY,6455.0,3,http://waterdata.usgs.gov/wy/nwis/uv?10020100,10020100,41.4343899,111.0176863,6455.0,Upper Bear
+24,BERU1,Bear ,UT,7965.0,1,http://waterdata.usgs.gov/ut/nwis/uv?10011500,10011500,40.9652254,110.8535079,7965.0,Upper Bear
+25,BESI1,Bear ,ID,5760.0,16,http://waterdata.usgs.gov/id/nwis/uv?10075000,10075000,42.61381026,111.583556,5760.0,Bear Lake
+26,BIUI1,Bear ,ID,4420.0,21,http://waterdata.usgs.gov/id/nwis/uv?10092700,10092700,42.0129808,111.92134,4420.0,Middle Bear
+27,BRAI1,Bear ,ID,5950.0,15,http://waterdata.usgs.gov/id/nwis/uv?10068500,10068500,42.4015929,111.356875,5950.0,Bear Lake
+28,BRBW4,Bear ,WY,6052.0,9,http://waterdata.usgs.gov/wy/nwis/uv?10039500,10039500,42.21104338,111.0538022,6051.63,Central Bear
+29,BRWU1,Bear ,UT,6400.0,5,http://waterdata.usgs.gov/ut/nwis/uv?10020300,10020300,41.505501,111.0146317,6400.0,Upper Bear
+30,COKW4,Bear ,WY,6140.0,8,http://waterdata.usgs.gov/wy/nwis/uv?10038000,10038000,42.12604658,110.9737986,6140.0,Central Bear
+31,EVAW4,Bear ,WY,6730.0,2,http://waterdata.usgs.gov/wy/nwis/uv?10016900,10016900,41.2698611,110.9636944,6730.0,Upper Bear
+32,PIXW4,Bear ,WY,6185.0,6,http://waterdata.usgs.gov/wy/nwis/uv?10028500,10028500,41.93882917,110.9854662,6185.0,Central Bear
+33,STDI1,Bear ,ID,5950.0,11,http://waterdata.usgs.gov/id/nwis/uv?10046500,10046500,42.25305556,111.2897222,5950.0,Bear Lake
+36,BEVU1,Beaver ,UT,6200.0,14,http://waterdata.usgs.gov/ut/nwis/uv?10234500,10234500,38.2805264,112.5682713,6200.0,Beaver Bottoms-Upper Beaver
+37,BDWU1,Beaver Dam Wash ,UT,4740.0,22,http://waterdata.usgs.gov/ut/nwis/uv?09413900,09413900,37.46997485,114.0466458,4740.53,Lower Virgin
+38,BEAA3,Beaver Dam Wash ,AZ,1850.0,23,http://waterdata.usgs.gov/az/nwis/uv?09414900,09414900,36.90192134,113.9335767,1850.0,Lower Virgin
+40,BCTU1,Big Cottonwood Ck ,UT,4990.0,4,http://waterdata.usgs.gov/ut/nwis/uv?10168500,10168500,40.6185592,111.7818763,4990.0,Jordan
+43,BSRW4,Big Sandy ,WY,6794.0,8,http://waterdata.usgs.gov/wy/nwis/uv?09213500,09213500,42.3296,109.5119,6794.0,Big Sandy
+44,WKPA3,Big Sandy ,AZ,1400.0,5,http://waterdata.usgs.gov/az/nwis/uv?09424450,09424450,34.46251664,113.6243774,1400.0,Big Sandy
+46,BWAA3,Bill Williams ,AZ,967.0,8,http://waterdata.usgs.gov/az/nwis/uv?09426000,09426000,34.2308539,113.6088195,967.0,Bill Williams
+47,BWPA3,Bill Williams ,AZ,500.0,9,http://waterdata.usgs.gov/az/nwis/uv?09426620,09426620,34.2625155,114.0277209,500.0,Bill Williams
+48,BPPA3,Black ,AZ,5725.0,1,http://waterdata.usgs.gov/az/nwis/uv?09489500,09489500,33.47672039,109.7639775,5725.0,Black
+49,BNRU1,Blacks Fork ,UT,8811.0,15,http://waterdata.usgs.gov/ut/nwis/uv?09217900,09217900,40.95902778,110.5797222,8811.3,Blacks Fork
+50,LTAW4,Blacks Fork ,WY,6128.0,20,http://waterdata.usgs.gov/wy/nwis/uv?09224700,09224700,41.54607224,109.6934746,6127.66,Blacks Fork
+51,HRMU1,Blacksmith Fork ,UT,5021.0,23,http://waterdata.usgs.gov/ut/nwis/uv?10113500,10113500,41.6235452,111.7388286,5020.6,Little Bear-Logan
+52,BGMC2,Blue ,CO,7683.0,21,http://waterdata.usgs.gov/co/nwis/uv?09057500,09057500,39.88026354,106.3339175,7682.66,Blue
+53,BLCA3,Blue ,AZ,4160.0,10,http://waterdata.usgs.gov/az/nwis/uv?09444200,09444200,33.29089456,109.1961832,4160.0,San Francisco
+54,BLRC2,Blue ,CO,8760.0,18,http://waterdata.usgs.gov/co/nwis/uv?09050700,09050700,39.625542,106.0664082,8760.0,Blue
+55,BSWC2,Blue ,CO,9020.0,15,http://waterdata.usgs.gov/co/nwis/uv?09046600,09046600,39.56665329,106.0494632,9020.0,Blue
+56,BUEC2,Blue ,CO,9835.0,14,http://waterdata.usgs.gov/co/nwis/uv?09046490,09046490,39.45582067,106.0316849,9835.0,Blue
+57,BNMA3,Bonita Ck ,AZ,3500.0,13,http://waterdata.usgs.gov/az/nwis/uv?09447800,09447800,32.95561778,109.5311876,3500.0,Upper Gila-San Carlos Reservoir
+59,BWTA3,Brawley Wash ,AZ,2540.0,25,http://waterdata.usgs.gov/az/nwis/uv?09487000,09487000,32.07563364,111.3387156,2540.0,Rillito
+61,BCBA3,Burro Ck ,AZ,1880.0,4,http://waterdata.usgs.gov/az/nwis/uv?09424447,09424447,34.5416838,113.4452053,1880.0,Burro
+63,CDOA3,Canada Del Oro ,AZ,2245.0,21,http://waterdata.usgs.gov/az/nwis/uv?09486350,09486350,32.33618529,111.0420429,2240.0,Upper Santa Cruz
+66,CAWA3,Carrizo Wash ,AZ,5611.0,2,http://waterdata.usgs.gov/az/nwis/uv?09386250,09386250,34.6147587,109.3184306,5610.5,Upper Little Colorado
+67,CAVA3,Cave Ck ,AZ,2280.0,1,http://waterdata.usgs.gov/az/nwis/uv?09512280,09512280,33.88725977,111.9540388,2280.0,Lower Salt
+70,CSPA3,Centennial Wash ,AZ,841.0,11,http://waterdata.usgs.gov/az/nwis/uv?09517490,09517490,33.31031984,112.8818423,841.06,Centennial Wash
+72,CIVU1,Chalk Ck ,UT,5561.0,6,http://waterdata.usgs.gov/ut/nwis/uv?10131000,10131000,40.92050285,111.4015858,5561.43,Upper Weber
+73,CHRA3,Cherry Ck ,AZ,3200.0,8,http://waterdata.usgs.gov/az/nwis/uv?09497980,09497980,33.8278262,110.8562266,3200.0,Upper Salt
+74,CHWA3,Chevelon Ck ,AZ,5905.0,20,http://waterdata.usgs.gov/az/nwis/uv?09397500,09397500,34.6364196,110.7142957,5905.16,Chevelon Canyon
+75,CCMA3,Chinle Ck ,AZ,4720.0,28,http://waterdata.usgs.gov/az/nwis/uv?09379200,09379200,36.943891,109.7106684,4720.0,Chinle
+76,CNEA3,Cienega Ck ,AZ,4180.0,6,http://waterdata.usgs.gov/az/nwis/uv?09484550,09484550,31.86555556,110.57,4180.0,Rillito
+77,CMRC2,Cimarron ,CO,8641.0,18,http://waterdata.usgs.gov/co/nwis/uv?09126000,09126000,38.25819444,107.5461111,8641.48,Upper Gunnison
+79,CCDU1,Clear Ck ,UT,5680.0,8,http://waterdata.usgs.gov/ut/nwis/uv?10194200,10194200,38.5794169,112.2885399,5680.0,Middle Sevier
+80,CCWA3,Clear Ck ,AZ,4861.0,21,http://waterdata.usgs.gov/az/nwis/uv?09399000,09399000,34.96946689,110.6451326,4861.32,Middle Little Colorado
+82,COAU1,Coal Ck ,UT,6000.0,13,http://waterdata.usgs.gov/ut/nwis/uv?10242000,10242000,37.67219924,113.0346702,5983.01,Escalante Desert
+83,CRCC2,Cochetopa Ck ,CO,8470.0,9,http://waterdata.usgs.gov/co/nwis/uv?09118450,09118450,38.3372222,106.7736111,8470.0,Tomichi
+84,BAKC2,Colorado ,CO,8750.0,3,http://waterdata.usgs.gov/co/nwis/uv?09010500,09010500,40.32581784,105.8566791,8750.0,Colorado Headwaters
+85,CAMC2,Colorado ,CO,4814.0,22,http://waterdata.usgs.gov/co/nwis/uv?09095500,09095500,39.2391463,108.2661946,4813.73,Colorado Headwaters-Plateau
+86,CAWC2,Colorado ,CO,7790.0,8,http://waterdata.usgs.gov/co/nwis/uv?09034250,09034250,40.108319,106.0041847,7790.0,Colorado Headwaters
+87,CBDN2,Colorado ,NV,490.0,7,http://waterdata.usgs.gov/nv/nwis/uv?09423000,09423000,35.19166556,114.5721876,490.0,Havasu-Mohave Lakes
+88,CBGC2,Colorado ,CO,7960.0,5,http://waterdata.usgs.gov/co/nwis/uv?09019500,09019500,40.12081915,105.9005694,7960.0,Colorado Headwaters
+89,CCUC2,Colorado ,CO,4325.0,1,http://waterdata.usgs.gov/co/nwis/uv?09163500,09163500,39.13276047,109.0270546,4325.0,Colorado Headwaters-Plateau
+90,CDCA3,Colorado ,AZ,1340.0,3,http://waterdata.usgs.gov/az/nwis/uv?09404200,09404200,35.7735994,113.363544,1340.0,Grand Canyon
+91,CGCA3,Colorado ,AZ,2419.0,2,http://waterdata.usgs.gov/az/nwis/uv?09402500,09402500,36.10137176,112.0862795,2418.7,Lower Colorado-Marble Canyon
+92,CGYC2,Colorado ,CO,4670.0,26,http://waterdata.usgs.gov/co/nwis/uv?09106150,09106150,39.09859226,108.355086,4670.0,Colorado Headwaters-Plateau
+93,CIDC1,Colorado ,CA,162.0,14,http://waterdata.usgs.gov//nwis/uv?09429500,09429500,32.86758333,114.472111,130.0,Lower Colorado
+94,CLFA3,Colorado ,AZ,3106.0,1,http://waterdata.usgs.gov/az/nwis/uv?09380000,09380000,36.8643333,111.5878722,3083.0,Lower Lake Powell
+95,CLRU1,Colorado ,UT,4090.0,2,http://waterdata.usgs.gov/ut/nwis/uv?09180500,09180500,38.81054095,109.2934493,4092.35,Upper Colorado-Kane Springs
+96,CPDC1,Colorado ,CA,301.0,9,http://waterdata.usgs.gov//nwis/uv?09427520,09427520,34.29557035,114.140225,300.54,Imperial Reservoir
+97,CPVC1,Colorado ,CA,260.0,11,http://waterdata.usgs.gov//nwis/uv?09429100,09429100,33.71946626,114.4980105,260.0,Imperial Reservoir
+101,EGLC2,Colorado ,CO,6130.0,10,http://waterdata.usgs.gov/co/nwis/uv?09070500,09070500,39.6446111,107.0780139,6130.0,Colorado Headwaters
+102,GCOC2,Colorado ,CO,5701.0,18,http://waterdata.usgs.gov/co/nwis/uv?09085100,09085100,39.5549819,107.337554,5700.75,Colorado Headwaters-Plateau
+103,HTSC2,Colorado ,CO,7670.0,9,http://waterdata.usgs.gov/co/nwis/uv?09034500,09034500,40.08331887,106.0880765,7670.0,Colorado Headwaters
+104,IRRA3,Colorado ,AZ,182.0,13,http://waterdata.usgs.gov/az/nwis/uv?09429495,09429495,32.88288889,114.4628056,182.0,Imperial Reservoir
+105,KRMC2,Colorado ,CO,7320.0,24,http://waterdata.usgs.gov/co/nwis/uv?09058000,09058000,40.03665248,106.4400324,7320.0,Colorado Headwaters
+107,CSSC2,Cross Ck ,CO,7992.0,6,http://waterdata.usgs.gov/co/nwis/uv?09065100,09065100,39.56829167,106.4124306,7992.0,Eagle
+108,RCYC2,Crystal ,CO,6905.0,12,http://waterdata.usgs.gov/co/nwis/uv?09081600,09081600,39.23263889,107.2275,6905.0,Roaring Fork
+109,DCKC2,Dallas Ck ,CO,6980.0,33,http://waterdata.usgs.gov/co/nwis/uv?09147000,09147000,38.17776806,107.7583927,6980.0,Uncompahgre
+111,DINA3,Dinnebito Wash ,AZ,5160.0,25,http://waterdata.usgs.gov/az/nwis/uv?09401110,09401110,35.78069444,110.9304167,5160.0,Dinnebito Wash
+112,DDHU1,Dirty Devil ,UT,3850.0,22,http://waterdata.usgs.gov/ut/nwis/uv?09333500,09333500,38.0941529,110.4073639,3850.0,Dirty Devil
+113,DBDC2,Dolores ,CO,4910.0,6,http://waterdata.usgs.gov/co/nwis/uv?09171100,09171100,38.3569337,108.8334347,4910.0,Upper Dolores
+114,DOLC2,Dolores ,CO,6940.0,2,http://waterdata.usgs.gov/co/nwis/uv?09166500,09166500,37.47249296,108.4975908,6940.0,Upper Dolores
+115,DOLU1,Dolores ,UT,4165.0,10,http://waterdata.usgs.gov/ut/nwis/uv?09180000,09180000,38.79720805,109.1951142,4165.0,Lower Dolores
+117,DRRC2,Dolores ,CO,8422.0,1,http://waterdata.usgs.gov/co/nwis/uv?09165000,09165000,37.63888428,108.0603517,8422.23,Upper Dolores
+118,DBVA3,Dry Beaver Ck ,AZ,3694.0,11,http://waterdata.usgs.gov/az/nwis/uv?09505350,09505350,34.72863146,111.775708,3694.38,Upper Verde
+120,DADU1,Duchesne ,UT,5840.0,17,http://waterdata.usgs.gov/ut/nwis/uv?09279150,09279150,40.27051046,110.4426567,5840.0,Duchesne
+121,DRUU1,Duchesne ,UT,4830.0,22,http://waterdata.usgs.gov/ut/nwis/uv?09295100,09295100,40.2066278,109.8598673,4830.0,Duchesne
+122,DURU1,Duchesne ,UT,4756.0,26,http://waterdata.usgs.gov/ut/nwis/uv?09302000,09302000,40.21027778,109.7813889,4756.1,Duchesne
+123,MYRU1,Duchesne ,UT,5061.0,21,http://waterdata.usgs.gov/ut/nwis/uv?09295000,09295000,40.20023757,110.0637613,5061.4,Duchesne
+124,TADU1,Duchesne ,UT,6190.0,12,http://waterdata.usgs.gov/ut/nwis/uv?09277500,09277500,40.30023027,110.602381,6190.0,Duchesne
+125,DCKN2,Duck Ck ,NV,1605.0,17,http://waterdata.usgs.gov/nv/nwis/uv?09419696,09419696,36.09080799,115.0238843,1605.0,Las Vegas Wash
+127,ECCU1,E Canyon Cr ,UT,5460.0,15,http://waterdata.usgs.gov/ut/nwis/uv?10134500,10134500,40.92244629,111.6071504,5460.0,Lower Weber
+128,EALC2,Eagle ,CO,7380.0,8,http://waterdata.usgs.gov/co/nwis/uv?09067020,09067020,39.6348611,106.5319444,7380.0,Eagle
+129,GPSC2,Eagle ,CO,6275.0,9,http://waterdata.usgs.gov/co/nwis/uv?09070000,09070000,39.64942954,106.9536554,6275.11,Eagle
+130,RERC2,Eagle ,CO,8654.0,2,http://waterdata.usgs.gov/co/nwis/uv?09063000,09063000,39.50831949,106.3666948,8653.8,Eagle
+131,ECMA3,Eagle Ck ,AZ,3674.0,12,http://waterdata.usgs.gov/az/nwis/uv?09447000,09447000,33.0645062,109.4422978,3673.5,Upper Gila-San Carlos Reservoir
+132,ALEC2,East ,CO,8006.0,5,http://waterdata.usgs.gov/co/nwis/uv?09112500,09112500,38.66443715,106.848095,8006.29,East-Taylor
+133,ECAU1,East Canyon Ck ,UT,6240.0,13,http://waterdata.usgs.gov/ut/nwis/uv?10133800,10133800,40.75966979,111.5640912,6237.48,Lower Weber
+134,ECPU1,East Canyon Ck ,UT,6360.0,12,http://waterdata.usgs.gov/ut/nwis/uv?10133650,10133650,40.7238375,111.5196438,6363.22,Lower Weber
+135,EFFU1,East Fork Virgin ,UT,5900.0,2,http://waterdata.usgs.gov/ut/nwis/uv?09404450,09404450,37.3394272,112.6043769,5872.07,Upper Virgin
+136,ESTU1,East Fork Virgin ,UT,3940.0,3,http://waterdata.usgs.gov/ut/nwis/uv?09404900,09404900,37.16414955,112.9585499,3940.0,Upper Virgin
+137,EVDA3,East Verde ,AZ,2500.0,15,http://waterdata.usgs.gov/az/nwis/uv?09507980,09507980,34.27642068,111.6387561,2500.0,Lower Verde
+138,SRKU1,Ef Sevier ,UT,6160.0,5,http://waterdata.usgs.gov/ut/nwis/uv?10189000,10189000,38.19636955,112.1477005,6160.0,East Fork Sevier
+139,SFRW4,Ef Smiths Fork ,WY,8470.0,19,http://waterdata.usgs.gov/wy/nwis/uv?09220000,09220000,41.0538611,110.3986389,8470.0,Blacks Fork
+141,ENMC2,Elk ,CO,6590.0,6,http://waterdata.usgs.gov/co/nwis/uv?09242500,09242500,40.5146975,106.9539407,6590.0,Upper Yampa
+142,ELCC2,Elkhead Ck ,CO,6240.0,9,http://waterdata.usgs.gov/co/nwis/uv?09246500,09246500,40.5310829,107.4361735,6230.0,Upper Yampa
+143,ELHC2,Elkhead Ck ,CO,6405.0,7,http://waterdata.usgs.gov/co/nwis/uv?09246200,09246200,40.59163879,107.3208933,6405.0,Upper Yampa
+146,ESCU1,Escalante ,UT,5670.0,23,http://waterdata.usgs.gov/ut/nwis/uv?09337500,09337500,37.77804389,111.5746181,5670.0,Escalante
+147,FRRU1,Ferron Ck ,UT,6210.0,15,http://waterdata.usgs.gov/ut/nwis/uv?09326500,09326500,39.10413724,111.2165589,6210.0,San Rafael
+148,FCNU1,Fish Ck ,UT,7670.0,27,http://waterdata.usgs.gov/ut/nwis/uv?09310500,09310500,39.77440566,111.191006,7670.0,Price
+149,FISC2,Fish Ck ,CO,7150.0,1,http://waterdata.usgs.gov/co/nwis/uv?09238900,09238900,40.4749775,106.7869926,7150.0,Upper Yampa
+150,FWDN2,Flamingo Wash ,NV,2233.0,14,http://waterdata.usgs.gov/nv/nwis/uv?09419674,09419674,36.1027488,115.2077774,2233.4,Las Vegas Wash
+152,BDAC2,Florida ,CO,6000.0,16,http://waterdata.usgs.gov/co/nwis/uv?09363200,09363200,37.0566689,107.8697877,6000.0,Animas
+154,FCHW4,Fontenelle Ck ,WY,6950.0,5,http://waterdata.usgs.gov/wy/nwis/uv?09210500,09210500,42.09580556,110.4160833,6950.0,Upper Green
+155,FPWU1,Fort Pearce Wash ,UT,2800.0,20,http://waterdata.usgs.gov/ut/nwis/uv?09408195,09408195,37.00164939,113.4688407,2791.35,Fort Pearce Wash
+156,FCSA3,Fossil Ck ,AZ,3600.0,17,http://waterdata.usgs.gov/az/nwis/uv?09507480,09507480,34.39430556,111.63,3600.0,Lower Verde
+157,FRGC2,Fraser ,CO,7900.0,7,http://waterdata.usgs.gov/co/nwis/uv?09034000,09034000,40.0852636,105.9552936,7900.0,Colorado Headwaters
+158,FRWC2,Fraser ,CO,8906.0,6,http://waterdata.usgs.gov/co/nwis/uv?09024000,09024000,39.89998695,105.7766741,8906.23,Colorado Headwaters
+159,CANU1,Fremont ,UT,4760.0,21,http://waterdata.usgs.gov/ut/nwis/uv?09330230,09330230,38.2791469,111.0657201,4760.0,Fremont
+160,FREU1,Fremont ,UT,6920.0,20,http://waterdata.usgs.gov/ut/nwis/uv?09330000,09330000,38.3069248,111.5187917,6920.0,Fremont
+161,FPTC2,Frying Pan ,CO,8210.0,14,http://waterdata.usgs.gov/co/nwis/uv?09078600,09078600,39.34470844,106.6736455,8210.0,Roaring Fork
+162,RUDC2,Frying Pan ,CO,7473.0,16,http://waterdata.usgs.gov/co/nwis/uv?09080400,09080400,39.36554075,106.8255948,7473.25,Roaring Fork
+163,DUUA3,Gila ,AZ,3663.0,6,http://waterdata.usgs.gov/az/nwis/uv?09439000,09439000,32.72444444,109.0991667,3663.0,Upper Gila-Mangas
+164,GATA3,Gila ,AZ,1418.0,2,http://waterdata.usgs.gov/az/nwis/uv?09477570,09477570,33.01950464,111.5287362,1418.0,Middle Gila
+165,GCDA3,Gila ,AZ,2309.0,19,http://waterdata.usgs.gov/az/nwis/uv?09469500,09469500,33.1695055,110.5312109,2309.33,Middle Gila
+166,GCFA3,Gila ,AZ,3336.0,7,http://waterdata.usgs.gov/az/nwis/uv?09442000,09442000,32.96527778,109.3086111,3336.38,Upper Gila-Mangas
+168,GDTA3,Gila ,AZ,363.0,16,http://waterdata.usgs.gov/az/nwis/uv?09520280,09520280,32.8822686,113.541306,363.33,Lower Gila
+169,GGDA3,Gila ,AZ,753.0,11,http://waterdata.usgs.gov/az/nwis/uv?09519501,09519501,33.22921044,112.7673929,753.0,09519501
+170,GIDA3,Gila ,AZ,139.0,17,http://waterdata.usgs.gov/az/nwis/uv?09520500,09520500,32.7608789,114.4205019,139.0,Lower Gila
+171,GILN5,Gila ,NM,4655.0,2,http://waterdata.usgs.gov/nm/nwis/uv?09430500,09430500,33.06150278,108.5373861,4655.0,Upper Gila
+172,GLCA3,Gila ,AZ,2517.0,16,http://waterdata.usgs.gov/az/nwis/uv?09466500,09466500,33.18561278,110.2200903,2517.0,Upper Gila-San Carlos Reservoir
+173,GLHA3,Gila ,AZ,3060.0,14,http://waterdata.usgs.gov/az/nwis/uv?09448500,09448500,32.8827222,109.4796056,3060.0,Upper Gila-San Carlos Reservoir
+174,GLKA3,Gila ,AZ,1745.0,1,http://waterdata.usgs.gov/az/nwis/uv?09474000,09474000,33.1028404,110.9765014,1745.0,Middle Gila
+175,GPRA3,Gila ,AZ,519.0,15,http://waterdata.usgs.gov/az/nwis/uv?09519800,09519800,33.0750458,113.0146217,519.0,Lower Gila
+176,GRGA3,Gila ,AZ,883.0,9,http://waterdata.usgs.gov/az/nwis/uv?09514100,09514100,33.3875427,112.3923808,883.0,Lower Gila-Painted Rock Reservoir
+177,GRMA3,Gila ,AZ,1114.0,7,http://waterdata.usgs.gov/az/nwis/uv?09479350,09479350,33.168661,112.0073648,1114.0,Middle Gila
+178,GVRN5,Gila ,NM,3875.0,5,http://waterdata.usgs.gov/nm/nwis/uv?09432000,09432000,32.64818333,108.8460889,3875.0,Upper Gila-Mangas
+179,RGRN5,Gila ,NM,4090.0,4,http://waterdata.usgs.gov/nm/nwis/uv?09431500,09431500,32.72694444,108.6755556,4090.0,Upper Gila-Mangas
+180,GRVC2,Gore Ck ,CO,8055.0,7,http://waterdata.usgs.gov/co/nwis/uv?09066325,09066325,39.6410971,106.3947515,8055.0,Eagle
+182,GRCA3,Granite Ck ,AZ,5204.0,4,http://waterdata.usgs.gov/az/nwis/uv?09503000,09503000,34.56307975,112.4448909,5204.0,Upper Verde
+183,GRWA3,Granite Ck ,AZ,5020.0,6,http://waterdata.usgs.gov/az/nwis/uv?09503300,09503300,34.6136111,112.4172222,5020.0,Upper Verde
+184,GSPU1,Great Salt Lake ,UT,4187.0,5,http://waterdata.usgs.gov/ut/nwis/uv?10010000,10010000,40.73133329,112.2135569,4187.0,Great Salt Lake
+185,GBFW4,Green ,WY,6378.0,7,http://waterdata.usgs.gov/wy/nwis/uv?09211200,09211200,42.0209722,110.0498056,6378.0,Upper Green-Slate
+186,GRRW4,Green ,WY,6060.0,11,http://waterdata.usgs.gov/wy/nwis/uv?09217000,09217000,41.51635366,109.4490234,6060.0,Upper Green-Flaming Gorge Reservoir
+187,GRVU1,Green ,UT,4040.0,25,http://waterdata.usgs.gov/ut/nwis/uv?09315000,09315000,38.9860831,110.1512475,4040.0,Lower Green
+188,GRZU1,Green ,UT,5594.0,23,http://waterdata.usgs.gov/ut/nwis/uv?09234500,09234500,40.90829296,109.422914,5594.0,Upper Green-Flaming Gorge Reservoir
+189,JESU1,Green ,UT,4758.0,24,http://waterdata.usgs.gov/ut/nwis/uv?09261000,09261000,40.40940757,109.2354043,4758.0,Lower Green-Diamond
+190,LABW4,Green ,WY,6520.0,4,http://waterdata.usgs.gov/wy/nwis/uv?09209400,09209400,42.19272157,110.163214,6520.0,Upper Green
+191,WBRW4,Green ,WY,7468.0,1,http://waterdata.usgs.gov/wy/nwis/uv?09188500,09188500,43.0190833,110.1188611,7468.0,Upper Green
+192,DELC2,Gunnison ,CO,4910.0,31,http://waterdata.usgs.gov/co/nwis/uv?09144250,09144250,38.75303944,108.078403,4910.0,Lower Gunnison
+193,GEPC2,Gunnison ,CO,6526.0,21,http://waterdata.usgs.gov/co/nwis/uv?09128000,09128000,38.52915336,107.648947,6526.0,Upper Gunnison
+194,GJNC2,Gunnison ,CO,4628.0,38,http://waterdata.usgs.gov/co/nwis/uv?09152500,09152500,38.98331575,108.4506446,4628.0,Lower Gunnison
+195,GUSC2,Gunnison ,CO,7655.0,7,http://waterdata.usgs.gov/co/nwis/uv?09114500,09114500,38.54193567,106.9497661,7655.0,Upper Gunnison
+196,HMFW4,Hams Fork ,WY,7455.0,12,http://waterdata.usgs.gov/wy/nwis/uv?09223000,09223000,42.11088889,110.7094167,7455.0,Blacks Fork
+197,HAMA3,Hassayampa ,AZ,1830.0,6,http://waterdata.usgs.gov/az/nwis/uv?09516500,09516500,33.88503188,112.6621198,1830.0,Hassayampa
+198,HSTA3,Hassayampa ,AZ,823.0,8,http://waterdata.usgs.gov/az/nwis/uv?09517000,09517000,33.34726408,112.7257259,823.0,Hassayampa
+202,SUPA3,Havasu Ck ,AZ,3240.0,3,http://waterdata.usgs.gov/az/nwis/uv?09404110,09404110,36.21946667,112.6901,3240.0,Havasu Canyon
+203,HFMW4,Henrys Fork ,WY,6060.0,21,http://waterdata.usgs.gov/wy/nwis/uv?09229500,09229500,41.011,109.6735,6060.0,Upper Green-Flaming Gorge Reservoir
+204,HBCU1,Hobble Ck ,UT,4501.0,13,http://waterdata.usgs.gov/ut/nwis/uv?10153100,10153100,40.1788719,111.639338,4501.0,Spanish Fork
+205,HMSC2,Homestake Ck ,CO,9200.0,5,http://waterdata.usgs.gov/co/nwis/uv?09064000,09064000,39.4055426,106.433362,9200.0,Eagle
+206,HUNC2,Hunter Ck ,CO,8610.0,13,http://waterdata.usgs.gov/co/nwis/uv?09074000,09074000,39.20582037,106.797538,8610.0,Roaring Fork
+210,IDXA3,Indian Bend Wash ,AZ,1162.0,19,http://waterdata.usgs.gov/az/nwis/uv?09512162,09512162,33.4403229,111.9151434,1162.0,Lower Salt
+214,JRSU1,Jordan ,UT,4220.0,2,http://waterdata.usgs.gov/ut/nwis/uv?10171000,10171000,40.73355737,111.9232703,4220.0,Jordan
+216,KCKU1,Kanab Ck ,UT,5060.0,2,http://waterdata.usgs.gov/ut/nwis/uv?09403600,09403600,37.10054059,112.5479827,5060.0,Kanab
+217,LPFN5,La Plata ,NM,5215.0,22,http://waterdata.usgs.gov/nm/nwis/uv?09367500,09367500,36.737575,108.2503361,5215.0,Middle San Juan
+218,LPHC2,La Plata ,CO,8105.0,20,http://waterdata.usgs.gov/co/nwis/uv?09365500,09365500,37.28972246,108.0406277,8105.0,Middle San Juan
+219,LPSC2,La Plata ,CO,5972.0,21,http://waterdata.usgs.gov/co/nwis/uv?09366500,09366500,36.99972239,108.1886882,5972.0,Middle San Juan
+220,LFBC2,Lake Fork ,CO,9000.0,11,http://waterdata.usgs.gov/co/nwis/uv?09123450,09123450,37.9843611,107.2920972,9000.0,Upper Gunnison
+221,LFGC2,Lake Fork ,CO,7828.0,12,http://waterdata.usgs.gov/co/nwis/uv?09124500,09124500,38.2988834,107.2300557,7828.0,Upper Gunnison
+223,KIDN2,Las Vegas Wash ,NV,1450.0,19,http://waterdata.usgs.gov/nv/nwis/uv?09419753,09419753,36.100375,114.9433194,1450.0,Las Vegas Wash
+225,LVPN2,Las Vegas Wash ,NV,1540.0,18,http://waterdata.usgs.gov/nv/nwis/uv?09419700,09419700,36.08747539,114.9858276,1540.0,Las Vegas Wash
+227,SAHN2,Las Vegas Wash ,NV,1715.0,12,http://waterdata.usgs.gov/nv/nwis/uv?09419658,09419658,36.14636168,115.0527758,1715.0,Las Vegas Wash
+228,LEEU1,Leeds Ck ,UT,4000.0,9,http://waterdata.usgs.gov/ut/nwis/uv?09408000,09408000,37.26748174,113.3707839,4000.0,Upper Virgin
+229,LESA3,Leslie Ck ,AZ,4620.0,5,http://waterdata.usgs.gov/az/nwis/uv?09537200,09537200,31.5900961,109.5089559,4620.0,Whitewater Draw
+231,PRZU1,Little Bear ,UT,4740.0,26,http://waterdata.usgs.gov/ut/nwis/uv?10105900,10105900,41.5754898,111.8552203,4740.0,Little Bear-Logan
+232,LBZA3,Little Colorado ,AZ,5530.0,7,http://waterdata.usgs.gov/az/nwis/uv?09386300,09386300,34.6047544,109.4892735,5530.0,Upper Little Colorado
+233,LCCA3,Little Colorado ,AZ,3979.0,29,http://waterdata.usgs.gov/az/nwis/uv?09402000,09402000,35.9263819,111.5673682,3979.0,Lower Little Colorado
+234,LCJA3,Little Colorado ,AZ,5031.0,18,http://waterdata.usgs.gov/az/nwis/uv?09397300,09397300,34.90113674,110.2554013,5031.0,Middle Little Colorado
+235,LCLA3,Little Colorado ,AZ,6010.0,3,http://waterdata.usgs.gov/az/nwis/uv?09384000,09384000,34.31448635,109.362315,6010.0,Little Colorado Headwaters
+236,LCWA3,Little Colorado ,AZ,4863.0,22,http://waterdata.usgs.gov/az/nwis/uv?09400350,09400350,35.011688,110.6512444,4863.0,Middle Little Colorado
+237,LCZA3,Little Colorado ,AZ,5560.0,6,http://waterdata.usgs.gov/az/nwis/uv?09386030,09386030,34.5836456,109.4070467,5560.0,Upper Little Colorado
+238,LHBA3,Little Colorado ,AZ,5063.0,17,http://waterdata.usgs.gov/az/nwis/uv?09397000,09397000,34.8978039,110.1631768,5063.0,Middle Little Colorado
+239,LYMA3,Little Colorado ,AZ,5980.0,4,http://waterdata.usgs.gov/az/nwis/uv?09384600,09384600,34.37448424,109.3848182,5980.0,Little Colorado Headwaters
+240,WDRA3,Little Colorado ,AZ,5130.0,15,http://waterdata.usgs.gov/az/nwis/uv?09394500,09394500,34.7828076,110.0442837,5130.0,Upper Little Colorado
+241,LCJU1,Little Cottonwood Ck ,UT,4255.0,3,http://waterdata.usgs.gov/ut/nwis/uv?10168000,10168000,40.66430556,111.898861,4255.0,Jordan
+242,LCTU1,Little Cottonwood Ck ,UT,5080.0,1,http://waterdata.usgs.gov/ut/nwis/uv?10167500,10167500,40.5777263,111.7979877,5080.0,Jordan
+244,LNAC2,Little Navajo ,CO,7756.0,4,http://waterdata.usgs.gov/co/nwis/uv?09345200,09345200,37.07730556,106.8112222,7756.0,Upper San Juan
+245,LILC2,Little Snake ,CO,5685.0,16,http://waterdata.usgs.gov/co/nwis/uv?09260000,09260000,40.54901667,108.4243222,5685.0,Little Snake
+246,LSDW4,Little Snake ,WY,6340.0,15,http://waterdata.usgs.gov/wy/nwis/uv?09257000,09257000,41.02852778,107.5488611,6340.0,Little Snake
+247,LSRC2,Little Snake ,CO,6831.0,13,http://waterdata.usgs.gov/co/nwis/uv?09253000,09253000,40.99941048,107.143388,6831.0,Little Snake
+248,LGNU1,Logan ,UT,4680.0,22,http://waterdata.usgs.gov/ut/nwis/uv?10109000,10109000,41.74326439,111.78272,4680.0,Little Bear-Logan
+250,LOSC2,Los Pinos ,CO,6144.0,9,http://waterdata.usgs.gov/co/nwis/uv?09354500,09354500,37.0094484,107.5994997,6144.0,Upper San Juan
+252,LCCC2,Lost Canyon Ck ,CO,7030.0,3,http://waterdata.usgs.gov/co/nwis/uv?09166950,09166950,37.44610459,108.4692562,7030.0,Upper Dolores
+253,CRDU1,Lost Ck ,UT,5820.0,10,http://waterdata.usgs.gov/ut/nwis/uv?10132500,10132500,41.18068056,111.4004583,5820.0,Upper Weber
+254,MNRC2,Mancos ,CO,7235.0,24,http://waterdata.usgs.gov/co/nwis/uv?09370000,09370000,37.3572184,108.254803,7235.0,Mancos
+255,MRTC2,Mancos ,CO,5056.0,25,http://waterdata.usgs.gov/co/nwis/uv?09371000,09371000,37.02749425,108.7414838,5056.0,Mancos
+256,MAAU1,Manti Ck ,UT,6500.0,10,http://waterdata.usgs.gov/ut/nwis/uv?10215900,10215900,39.25912877,111.579916,6500.0,San Pitch
+258,MCEC2,Mcelmo Ck ,CO,4890.0,27,http://waterdata.usgs.gov/co/nwis/uv?09372000,09372000,37.32415968,109.015666,4890.0,McElmo
+259,MCLU1,Mcleod Ck ,UT,6590.0,11,http://waterdata.usgs.gov/ut/nwis/uv?10133600,10133600,40.68803889,111.5337194,6590.0,Upper Weber
+261,MVEN2,Meadow Valley Wash ,NV,5670.0,1,http://waterdata.usgs.gov/nv/nwis/uv?09417500,09417500,38.0041285,114.206927,5670.0,Meadow Valley Wash
+262,MVRN2,Meadow Valley Wash ,NV,1855.0,7,http://waterdata.usgs.gov/nv/nwis/uv?09418700,09418700,36.8382,114.6580556,1855.0,Meadow Valley Wash
+263,MVYN2,Meadow Valley Wash ,NV,4200.0,6,http://waterdata.usgs.gov/nv/nwis/uv?09418500,09418500,37.55837778,114.5630556,4200.0,Meadow Valley Wash
+265,MILU1,Mill Ck ,UT,5050.0,7,http://waterdata.usgs.gov/ut/nwis/uv?10170000,10170000,40.68883617,111.78271,5050.0,Jordan
+267,MOEA3,Moenkopi Wash ,AZ,4610.0,26,http://waterdata.usgs.gov/az/nwis/uv?09401260,09401260,36.10499334,111.2018069,4610.0,Moenkopi Wash
+268,MCCN5,Mogollon Ck ,NM,5440.0,3,http://waterdata.usgs.gov/nm/nwis/uv?09430600,09430600,33.16666667,108.6497222,5440.0,Upper Gila
+269,MCAU1,Mud Ck ,UT,7720.0,28,http://waterdata.usgs.gov/ut/nwis/uv?09310700,09310700,39.7216289,111.1612827,7720.0,Price
+270,MOAN2,Muddy ,NV,1710.0,8,http://waterdata.usgs.gov/nv/nwis/uv?09416000,09416000,36.7110817,114.6952715,1710.0,Muddy
+271,MUDN2,Muddy ,NV,1460.0,9,http://waterdata.usgs.gov/nv/nwis/uv?09419000,09419000,36.64302844,114.5397075,1460.0,Muddy
+272,MBWC2,Muddy Ck ,CO,7380.0,23,http://waterdata.usgs.gov/co/nwis/uv?09041400,09041400,40.10859628,106.4139212,7380.0,Colorado Headwaters
+274,MDCU1,Muddy Ck ,UT,6440.0,19,http://waterdata.usgs.gov/ut/nwis/uv?09330500,09330500,38.99105556,111.253886,6440.0,Muddy
+275,NAVC2,Navajo ,CO,7648.0,3,http://waterdata.usgs.gov/co/nwis/uv?09344400,09344400,37.03028919,106.7378136,7648.0,Upper San Juan
+278,NWRA3,New ,AZ,2310.0,12,http://waterdata.usgs.gov/az/nwis/uv?09513780,09513780,33.97420168,112.0990458,2310.0,Agua Fria
+279,BPNW4,New Fork ,WY,6800.0,3,http://waterdata.usgs.gov/wy/nwis/uv?09205000,09205000,42.56716598,109.930151,6800.0,New Fork
+280,SOMC2,Nf Gunnison ,CO,6280.0,25,http://waterdata.usgs.gov/co/nwis/uv?09132500,09132500,38.9258228,107.4342211,6280.0,North Fork Gunnison
+281,NWNA3,Nogales Wash ,AZ,3763.0,14,http://waterdata.usgs.gov/az/nwis/uv?09481000,09481000,31.3432722,110.9316722,3763.0,Upper Santa Cruz
+282,LZRC2,North Fork Gunnison ,CO,5100.0,26,http://waterdata.usgs.gov/co/nwis/uv?09136100,09136100,38.78516667,107.8334167,5100.0,North Fork Gunnison
+283,NFVU1,North Fork Virgin ,UT,3970.0,1,http://waterdata.usgs.gov/ut/nwis/uv?09405500,09405500,37.2097046,112.9785512,3970.0,Upper Virgin
+284,OACA3,Oak Ck ,AZ,3470.0,10,http://waterdata.usgs.gov/az/nwis/uv?09504500,09504500,34.76446436,111.8909885,3470.0,Upper Verde
+285,OAKA3,Oak Ck ,AZ,4169.0,9,http://waterdata.usgs.gov/az/nwis/uv?09504420,09504420,34.86168418,111.7618227,4169.0,Upper Verde
+286,OPDU1,Ogden ,UT,4760.0,21,http://waterdata.usgs.gov/ut/nwis/uv?10140100,10140100,41.254387,111.8557727,4760.0,Lower Weber
+287,OHOC2,Ohio Ck ,CO,7770.0,6,http://waterdata.usgs.gov/co/nwis/uv?09113980,09113980,38.5877696,106.931432,7770.0,Upper Gunnison
+288,ORWA3,Oraibi Wash ,AZ,5025.0,24,http://waterdata.usgs.gov/az/nwis/uv?09400562,09400562,35.57972897,110.774027,5025.0,Corn-Oraibi
+289,PNTA3,Pantano Wash ,AZ,3205.0,8,http://waterdata.usgs.gov/az/nwis/uv?09484600,09484600,32.0359141,110.6775818,3205.0,Rillito
+290,PWBA3,Pantano Wash ,AZ,2569.0,9,http://waterdata.usgs.gov/az/nwis/uv?09485450,09485450,32.2206319,110.829531,2569.0,Rillito
+291,PLFA3,Paria ,AZ,3124.0,1,http://waterdata.usgs.gov/az/nwis/uv?09382000,09382000,36.87220977,111.5946052,3124.0,Paria
+293,PIDC2,Piedra ,CO,6148.0,6,http://waterdata.usgs.gov/co/nwis/uv?09349800,09349800,37.08833797,107.397826,6148.0,Piedra
+294,PNLA3,Pinal Ck ,AZ,2740.0,9,http://waterdata.usgs.gov/az/nwis/uv?09498400,09498400,33.5731068,110.9012251,2740.0,Upper Salt
+295,FRAW4,Pine Ck ,WY,7450.0,2,http://waterdata.usgs.gov/wy/nwis/uv?09196500,09196500,43.02705556,109.7735278,7450.0,New Fork
+296,PSBC2,Piney ,CO,7272.0,1,http://waterdata.usgs.gov/co/nwis/uv?09059500,09059500,39.7957222,106.5743472,7272.0,Colorado Headwaters
+297,PCCC2,Plateau Ck ,CO,4840.0,25,http://waterdata.usgs.gov/co/nwis/uv?09105000,09105000,39.1836111,108.2683333,4840.0,Colorado Headwaters-Plateau
+298,POLA3,Polacca Wash ,AZ,5240.0,23,http://waterdata.usgs.gov/az/nwis/uv?09400568,09400568,35.65480556,110.563,5240.0,Polacca Wash
+299,PRHU1,Price ,UT,6000.0,32,http://waterdata.usgs.gov/ut/nwis/uv?09313000,09313000,39.71885199,110.8659946,6000.0,Price
+300,WOPU1,Price ,UT,4600.0,33,http://waterdata.usgs.gov/ut/nwis/uv?09314500,09314500,39.26444444,110.3427778,4600.0,Price
+302,PPPU1,Provo ,UT,4501.0,8,http://waterdata.usgs.gov/ut/nwis/uv?10163000,10163000,40.2377318,111.69937,4501.0,Provo
+303,PVHU1,Provo ,UT,6220.0,2,http://waterdata.usgs.gov/ut/nwis/uv?10155000,10155000,40.60166667,111.3358333,6220.0,Provo
+304,WOOU1,Provo ,UT,6950.0,1,http://waterdata.usgs.gov/ut/nwis/uv?10154200,10154200,40.5577278,111.1687838,6950.0,Provo
+305,PUCA3,Puerco ,AZ,5720.0,16,http://waterdata.usgs.gov/az/nwis/uv?09396100,09396100,35.18224625,109.4470509,5720.0,Lower Puerco
+306,WHIA3,Queen Ck ,AZ,2040.0,4,http://waterdata.usgs.gov/az/nwis/uv?09478500,09478500,33.29922128,111.2776263,2040.0,Middle Gila
+308,RBCU1,Red Butte Ck ,UT,5400.0,16,http://waterdata.usgs.gov/ut/nwis/uv?10172200,10172200,40.77994627,111.806045,5400.0,Jordan
+310,RICA3,Rillito Ck ,AZ,2260.0,11,http://waterdata.usgs.gov/az/nwis/uv?09486055,09486055,32.30340807,111.0120406,2260.0,Upper Santa Cruz
+311,RILA3,Rillito Ck ,AZ,2380.0,10,http://waterdata.usgs.gov/az/nwis/uv?09485700,09485700,32.2714643,110.9145354,2380.0,Rillito
+312,RINA3,Rincon Ck ,AZ,3120.0,5,http://waterdata.usgs.gov/az/nwis/uv?09485000,09485000,32.12952258,110.625914,3120.0,Rillito
+313,RBPC2,Rio Blanco ,CO,7858.0,2,http://waterdata.usgs.gov/co/nwis/uv?09343300,09343300,37.2036111,106.8122222,7858.0,Upper San Juan
+314,APNC2,Roaring Fork ,CO,8014.0,11,http://waterdata.usgs.gov/co/nwis/uv?09073400,09073400,39.17998755,106.8019826,8014.0,Roaring Fork
+315,GWSC2,Roaring Fork ,CO,5721.0,17,http://waterdata.usgs.gov/co/nwis/uv?09085000,09085000,39.54359307,107.3294984,5721.0,Roaring Fork
+316,ROKU1,Rock Ck ,UT,7250.0,16,http://waterdata.usgs.gov/ut/nwis/uv?09279000,09279000,40.4932799,110.5782169,7250.0,Duchesne
+318,WCGU1,S Willow Ck ,UT,6360.0,4,http://waterdata.usgs.gov/ut/nwis/uv?10172800,10172800,40.49633109,112.5744028,6360.0,Rush-Tooele Valleys
+319,SBCA3,Sabino Ck ,AZ,2720.0,3,http://waterdata.usgs.gov/az/nwis/uv?09484000,09484000,32.3147222,110.8109167,2720.0,Rillito
+320,SAYU1,Salina Ck ,UT,7000.0,11,http://waterdata.usgs.gov/ut/nwis/uv?10205030,10205030,38.9119141,111.5304654,7000.0,Middle Sevier
+321,GRDA3,Salt ,AZ,1281.0,16,http://waterdata.usgs.gov/az/nwis/uv?09512000,09512000,33.5158782,111.6915269,1281.0,Lower Salt
+322,SFFA3,Salt ,AZ,1010.0,21,http://waterdata.usgs.gov/az/nwis/uv?09512406,09512406,33.40143305,112.168762,1010.0,Lower Salt
+323,SLCA3,Salt ,AZ,3355.0,6,http://waterdata.usgs.gov/az/nwis/uv?09497500,09497500,33.79810588,110.4998292,3355.0,Upper Salt
+324,SLPA3,Salt ,AZ,1135.0,20,http://waterdata.usgs.gov/az/nwis/uv?09512165,09512165,33.43948927,111.9609781,1135.0,Lower Salt
+325,SLRA3,Salt ,AZ,2177.0,10,http://waterdata.usgs.gov/az/nwis/uv?09498500,09498500,33.6194949,110.9215037,2177.0,Upper Salt
+326,SMDA3,Salt ,AZ,1370.0,15,http://waterdata.usgs.gov/az/nwis/uv?09502000,09502000,33.55282304,111.5765243,1370.0,Lower Salt
+327,SZZU1,Salt Ck ,UT,5750.0,15,http://waterdata.usgs.gov/ut/nwis/uv?10145400,10145400,39.7171797,111.7335396,5750.0,Utah Lake
+328,SNCA3,San Carlos ,AZ,2542.0,17,http://waterdata.usgs.gov/az/nwis/uv?09468500,09468500,33.29644678,110.4514876,2542.0,San Carlos
+329,GSFN5,San Francisco ,NM,4560.0,9,http://waterdata.usgs.gov/nm/nwis/uv?09444000,09444000,33.24716667,108.88,4560.0,San Francisco
+330,RSFN5,San Francisco ,NM,5756.0,8,http://waterdata.usgs.gov/nm/nwis/uv?09442681,09442681,33.71710556,108.7572194,5756.0,San Francisco
+331,SFCA3,San Francisco ,AZ,3436.0,11,http://waterdata.usgs.gov/az/nwis/uv?09444500,09444500,33.04950776,109.2959047,3436.0,San Francisco
+332,ARCN5,San Juan ,NM,5655.0,11,http://waterdata.usgs.gov/nm/nwis/uv?09355500,09355500,36.80188889,107.6986389,5655.0,Upper San Juan
+333,BFFU1,San Juan ,UT,4048.0,29,http://waterdata.usgs.gov/ut/nwis/uv?09379500,09379500,37.15067778,109.8666889,4048.0,Lower San Juan
+334,FRMN5,San Juan ,NM,5230.0,19,http://waterdata.usgs.gov/nm/nwis/uv?09365000,09365000,36.72301667,108.2255889,5230.0,Middle San Juan
+335,PSPC2,San Juan ,CO,7052.0,1,http://waterdata.usgs.gov/co/nwis/uv?09342500,09342500,37.26552778,107.011,7052.0,Upper San Juan
+336,SHRN5,San Juan ,NM,4849.0,23,http://waterdata.usgs.gov/nm/nwis/uv?09368000,09368000,36.77666667,108.6830556,4849.0,Middle San Juan
+337,SJCC2,San Juan ,CO,6090.0,5,http://waterdata.usgs.gov/co/nwis/uv?09346400,09346400,37.01361667,107.312267,6090.0,Upper San Juan
+338,SJFC2,San Juan ,CO,4600.0,26,http://waterdata.usgs.gov/co/nwis/uv?09371010,09371010,37.00113889,109.0295833,4600.0,Lower San Juan-Four Corners
+339,SMPC2,San Miguel ,CO,7030.0,7,http://waterdata.usgs.gov/co/nwis/uv?09172500,09172500,38.03070556,108.1102889,7030.0,San Miguel
+340,SMUC2,San Miguel ,CO,5000.0,9,http://waterdata.usgs.gov/co/nwis/uv?09177000,09177000,38.35721157,108.712875,5000.0,San Miguel
+341,SNMC2,San Miguel ,CO,5570.0,8,http://waterdata.usgs.gov/co/nwis/uv?09174600,09174600,38.2441571,108.5020343,5570.0,San Miguel
+342,SAPA3,San Pedro ,AZ,3954.0,2,http://waterdata.usgs.gov/az/nwis/uv?09471000,09471000,31.62592644,110.1745226,3954.0,Upper San Pedro
+343,SPPA3,San Pedro ,AZ,4188.0,1,http://waterdata.usgs.gov/az/nwis/uv?09470500,09470500,31.38010095,110.1111882,4188.0,Upper San Pedro
+344,SPTA3,San Pedro ,AZ,3780.0,5,http://waterdata.usgs.gov/az/nwis/uv?09471550,09471550,31.7509224,110.2011882,3780.0,Upper San Pedro
+345,SRFU1,San Rafael ,UT,4200.0,18,http://waterdata.usgs.gov/ut/nwis/uv?09328500,09328500,38.8583081,110.3701469,4200.0,San Rafael
+348,SCVU1,Santa Clara ,UT,4875.0,16,http://waterdata.usgs.gov/ut/nwis/uv?09409100,09409100,37.38470108,113.6319052,4875.0,Upper Virgin
+349,SRSU1,Santa Clara ,UT,2560.0,19,http://waterdata.usgs.gov/ut/nwis/uv?09413000,09413000,37.07525867,113.5930125,2560.0,Upper Virgin
+350,STCU1,Santa Clara ,UT,6640.0,15,http://waterdata.usgs.gov/ut/nwis/uv?09408400,09408400,37.38331325,113.483288,6640.0,Upper Virgin
+351,CSCA3,Santa Cruz ,AZ,2100.0,22,http://waterdata.usgs.gov/az/nwis/uv?09486500,09486500,32.3511849,111.0945447,2100.0,Rillito
+352,SCCA3,Santa Cruz ,AZ,2820.0,16,http://waterdata.usgs.gov/az/nwis/uv?09482000,09482000,31.8714728,110.9800905,2820.0,Upper Santa Cruz
+353,SCNA3,Santa Cruz ,AZ,3703.0,13,http://waterdata.usgs.gov/az/nwis/uv?09480500,09480500,31.3445443,110.851474,3703.0,Upper Santa Cruz
+354,SCTA3,Santa Cruz ,AZ,1910.0,23,http://waterdata.usgs.gov/az/nwis/uv?09486520,09486520,32.47145874,111.3076074,1910.0,Lower Santa Cruz
+355,SLVA3,Santa Cruz ,AZ,1021.0,31,http://waterdata.usgs.gov/az/nwis/uv?09489000,09489000,33.23226977,112.169593,1021.0,Lower Santa Cruz
+356,STBA3,Santa Cruz ,AZ,3180.0,15,http://waterdata.usgs.gov/az/nwis/uv?09481740,09481740,31.61286778,111.0414792,3180.0,Upper Santa Cruz
+357,TSCA3,Santa Cruz ,AZ,2317.0,17,http://waterdata.usgs.gov/az/nwis/uv?09482500,09482500,32.22118727,110.9817589,2317.0,Upper Santa Cruz
+359,SMBA3,Santa Maria ,AZ,1360.0,6,http://waterdata.usgs.gov/az/nwis/uv?09424900,09424900,34.305854,113.3471441,1360.0,Santa Maria
+362,JOVU1,Seeley Ck ,UT,6990.0,13,http://waterdata.usgs.gov/ut/nwis/uv?09323900,09323900,39.28885345,111.2701732,6990.0,San Rafael
+363,HATU1,Sevier ,UT,6870.0,1,http://waterdata.usgs.gov/ut/nwis/uv?10174500,10174500,37.65109086,112.4302069,6870.0,Upper Sevier
+364,MYSU1,Sevier ,UT,5920.0,7,http://waterdata.usgs.gov/ut/nwis/uv?10191500,10191500,38.32803395,112.1877015,5920.0,Middle Sevier
+365,SEKU1,Sevier ,UT,5980.0,2,http://waterdata.usgs.gov/ut/nwis/uv?10183500,10183500,38.20609038,112.2077024,5980.0,Upper Sevier
+366,SGDU1,Sevier ,UT,5180.0,9,http://waterdata.usgs.gov/ut/nwis/uv?10205000,10205000,38.873298,111.9540931,5180.0,Middle Sevier
+367,SRYU1,Sevier ,UT,5025.0,12,http://waterdata.usgs.gov/ut/nwis/uv?10217000,10217000,39.1552387,111.877705,5025.0,Middle Sevier
+368,OGHU1,Sf Ogden ,UT,5190.0,19,http://waterdata.usgs.gov/ut/nwis/uv?10137500,10137500,41.26855226,111.6741004,5190.0,Lower Weber
+369,SLLA3,Show Low Ck ,AZ,6610.0,8,http://waterdata.usgs.gov/az/nwis/uv?09390500,09390500,34.17948755,109.9878858,6610.0,Silver
+370,SHOA3,Show Low Lake ,AZ,6580.0,9,http://waterdata.usgs.gov/az/nwis/uv?09391000,09391000,34.1958761,110.004831,6580.0,Silver
+371,SCJU1,Silver Ck ,UT,6470.0,4,http://waterdata.usgs.gov/ut/nwis/uv?10129900,10129900,40.73522634,111.4760313,6470.0,Upper Weber
+373,SCPA3,Skunk Ck ,AZ,1473.0,9,http://waterdata.usgs.gov/az/nwis/uv?09513860,09513860,33.72920456,112.1198755,1473.0,Agua Fria
+374,SLFC2,Slater Fork ,CO,6600.0,14,http://waterdata.usgs.gov/co/nwis/uv?09255000,09255000,40.9824657,107.3828391,6600.0,Little Snake
+375,SCCN2,Sloan Channel ,NV,1705.0,13,http://waterdata.usgs.gov/nv/nwis/uv?09419665,09419665,36.1596948,115.0452761,1705.0,Las Vegas Wash
+376,SFLC2,Smith Fk ,CO,5844.0,29,http://waterdata.usgs.gov/co/nwis/uv?09129600,09129600,38.70744444,107.7101389,5844.0,Upper Gunnison
+377,BORW4,Smiths Fork ,WY,6650.0,7,http://waterdata.usgs.gov/wy/nwis/uv?10032000,10032000,42.2932662,110.8724064,6650.0,Central Bear
+378,SKEC2,Snake ,CO,9320.0,16,http://waterdata.usgs.gov/co/nwis/uv?09047500,09047500,39.6053611,105.9431306,9320.0,Blue
+381,CASU1,Spanish Fork ,UT,4870.0,9,http://waterdata.usgs.gov/ut/nwis/uv?10150500,10150500,40.0496781,111.5479705,4870.0,Spanish Fork
+383,SLAC2,Straight Ck ,CO,9070.0,19,http://waterdata.usgs.gov/co/nwis/uv?09051050,09051050,39.6397087,106.040296,9070.0,Blue
+384,SCCC2,Surface Ck ,CO,6220.0,30,http://waterdata.usgs.gov/co/nwis/uv?09143500,09143500,38.9016487,107.921176,6220.0,Lower Gunnison
+385,SYCA3,Sycamore Ck ,AZ,1759.0,23,http://waterdata.usgs.gov/az/nwis/uv?09510200,09510200,33.69421054,111.541802,1759.0,Lower Verde
+387,TVCA3,Tanque Verde ,AZ,2470.0,4,http://waterdata.usgs.gov/az/nwis/uv?09484500,09484500,32.26535338,110.841199,2470.0,Rillito
+388,ALTC2,Taylor ,CO,8011.0,4,http://waterdata.usgs.gov/co/nwis/uv?09110000,09110000,38.66443715,106.8453172,8011.0,East-Taylor
+389,TRAC2,Taylor ,CO,9340.0,1,http://waterdata.usgs.gov/co/nwis/uv?09107000,09107000,38.86027127,106.5666966,9340.0,East-Taylor
+390,TRBC2,Taylor ,CO,9206.0,3,http://waterdata.usgs.gov/co/nwis/uv?09109000,09109000,38.8183269,106.6091977,9206.0,East-Taylor
+391,TCFC2,Tenmile Ck ,CO,9100.0,13,http://waterdata.usgs.gov/co/nwis/uv?09050100,09050100,39.57526424,106.1105765,9100.0,Blue
+392,THOI1,Thomas Fork ,ID,6280.0,10,http://waterdata.usgs.gov/id/nwis/uv?10041000,10041000,42.40215256,111.0249154,6280.0,Central Bear
+394,TMCC2,Tomichi Ck ,CO,8416.0,8,http://waterdata.usgs.gov/co/nwis/uv?09115500,09115500,38.39502778,106.422625,8416.0,Tomichi
+395,TOMC2,Tomichi Ck ,CO,7629.0,10,http://waterdata.usgs.gov/co/nwis/uv?09119000,09119000,38.5211111,106.9409583,7629.0,Tomichi
+396,TNRA3,Tonto Ck ,AZ,2523.0,11,http://waterdata.usgs.gov/az/nwis/uv?09499000,09499000,33.9800413,111.3034659,2523.0,Tonto
+397,NEUU1,Uinta ,UT,7330.0,23,http://waterdata.usgs.gov/ut/nwis/uv?09296800,09296800,40.5913396,110.1143226,7330.0,Duchesne
+398,URRU1,Uinta ,UT,4790.0,25,http://waterdata.usgs.gov/ut/nwis/uv?09301500,09301500,40.23357228,109.8037549,4790.0,Duchesne
+399,CLOC2,Uncompahgre ,CO,6319.0,36,http://waterdata.usgs.gov/co/nwis/uv?09147500,09147500,38.33143056,107.779225,6319.0,Uncompahgre
+400,DLAC2,Uncompahgre ,CO,4926.0,37,http://waterdata.usgs.gov/co/nwis/uv?09149500,09149500,38.74194444,108.0804167,4926.0,Uncompahgre
+401,UCRC2,Uncompahgre ,CO,6878.0,32,http://waterdata.usgs.gov/co/nwis/uv?09146200,09146200,38.1838791,107.7458924,6878.0,Uncompahgre
+402,UNRC2,Uncompahgre ,CO,6650.0,35,http://waterdata.usgs.gov/co/nwis/uv?09147025,09147025,38.24055556,107.7603056,6650.0,Uncompahgre
+403,UPBA3,Upper Babocomari ,AZ,4473.0,3,http://waterdata.usgs.gov/az/nwis/uv?09471380,09471380,31.635,110.4247222,4473.0,Upper San Pedro
+406,VCVA3,Verde ,AZ,2874.0,14,http://waterdata.usgs.gov/az/nwis/uv?09506000,09506000,34.4483605,111.7898705,2874.0,Lower Verde
+407,VDBA3,Verde ,AZ,1570.0,22,http://waterdata.usgs.gov/az/nwis/uv?09510000,09510000,33.80837509,111.6634729,1570.0,Lower Verde
+408,VDCA3,Verde ,AZ,3500.0,8,http://waterdata.usgs.gov/az/nwis/uv?09504000,09504000,34.8522416,112.065994,3500.0,Upper Verde
+409,VDPA3,Verde ,AZ,4117.0,7,http://waterdata.usgs.gov/az/nwis/uv?09503700,09503700,34.89502016,112.3429468,4117.0,Upper Verde
+410,VDSA3,Verde ,AZ,1320.0,24,http://waterdata.usgs.gov/az/nwis/uv?09511300,09511300,33.5586557,111.6693043,1320.0,Lower Verde
+411,VDTA3,Verde ,AZ,2029.0,18,http://waterdata.usgs.gov/az/nwis/uv?09508500,09508500,34.0730922,111.7162569,2029.0,Lower Verde
+412,HUCU1,Virgin ,UT,2980.0,8,http://waterdata.usgs.gov/ut/nwis/uv?09408135,09408135,37.19248238,113.3532832,2980.0,Upper Virgin
+413,HURU1,Virgin ,UT,2800.0,12,http://waterdata.usgs.gov/ut/nwis/uv?09408150,09408150,37.16276007,113.3952285,2800.0,Upper Virgin
+414,VIRU1,Virgin ,UT,3500.0,4,http://waterdata.usgs.gov/ut/nwis/uv?09406000,09406000,37.2041494,113.1807789,3500.0,Upper Virgin
+415,VLLU1,Virgin ,UT,3020.0,5,http://waterdata.usgs.gov/ut/nwis/uv?09406100,09406100,37.1969272,113.285226,3020.0,Upper Virgin
+416,VLMN2,Virgin ,NV,1220.0,26,http://waterdata.usgs.gov/nv/nwis/uv?09415250,09415250,36.51325,114.3359806,1220.0,Lake Mead
+417,VLTA3,Virgin ,AZ,1764.0,24,http://waterdata.usgs.gov/az/nwis/uv?09415000,09415000,36.8916437,113.9244098,1764.0,Lower Virgin
+418,VRBU1,Virgin ,UT,2530.0,21,http://waterdata.usgs.gov/ut/nwis/uv?09413200,09413200,37.07,113.5838889,2530.0,Lower Virgin
+419,VRMN2,Virgin ,NV,1560.0,25,http://waterdata.usgs.gov/nv/nwis/uv?09415090,09415090,36.79027778,114.093611,1560.0,Lower Virgin
+422,CLLU1,Weber ,UT,5600.0,5,http://waterdata.usgs.gov/ut/nwis/uv?10130500,10130500,40.89522527,111.4018633,5600.0,Upper Weber
+423,ECWU1,Weber ,UT,5440.0,8,http://waterdata.usgs.gov/ut/nwis/uv?10132000,10132000,40.9677245,111.437699,5440.0,Upper Weber
+424,GATU1,Weber ,UT,4800.0,16,http://waterdata.usgs.gov/ut/nwis/uv?10136500,10136500,41.1368878,111.8324384,4800.0,Lower Weber
+425,OAWU1,Weber ,UT,6640.0,1,http://waterdata.usgs.gov/ut/nwis/uv?10128500,10128500,40.7371721,111.2479652,6640.0,Upper Weber
+426,RKUU1,Weber ,UT,6037.0,2,http://waterdata.usgs.gov/ut/nwis/uv?10129400,10129400,40.7902261,111.4040846,6037.0,Upper Weber
+427,WBWU1,Weber ,UT,5900.0,3,http://waterdata.usgs.gov/ut/nwis/uv?10129500,10129500,40.79272607,111.404918,5900.0,Upper Weber
+428,WWPU1,Weber ,UT,4207.0,22,http://waterdata.usgs.gov/ut/nwis/uv?10141000,10141000,41.2782765,112.0918866,4207.0,Lower Weber
+429,WESU1,West Canyon Ck ,UT,5620.0,14,http://waterdata.usgs.gov/ut/nwis/uv?10166430,10166430,40.40522565,112.1004959,5620.0,Utah Lake
+430,WCLA3,West Clear Ck ,AZ,3630.0,13,http://waterdata.usgs.gov/az/nwis/uv?09505800,09505800,34.53863606,111.6940356,3630.0,Lower Verde
+431,WETC2,West Divide Ck ,CO,7050.0,19,http://waterdata.usgs.gov/co/nwis/uv?09089500,09089500,39.33109185,107.5800562,7050.0,Colorado Headwaters-Plateau
+433,WBVA3,Wet Beaver Ck ,AZ,4020.0,12,http://waterdata.usgs.gov/az/nwis/uv?09505200,09505200,34.67474409,111.672094,4020.0,Upper Verde
+434,WTBA3,Wet Bottom ,AZ,2320.0,16,http://waterdata.usgs.gov/az/nwis/uv?09508300,09508300,34.16086787,111.6929235,2320.0,Lower Verde
+435,WATU1,White ,UT,4947.0,21,http://waterdata.usgs.gov/ut/nwis/uv?09306500,09306500,39.97885629,109.1787269,4947.0,Lower White
+436,WHBC2,White ,CO,5395.0,20,http://waterdata.usgs.gov/co/nwis/uv?09306290,09306290,40.17969335,108.5653775,5395.0,Lower White
+437,WHIC2,White ,CO,5928.0,19,http://waterdata.usgs.gov/co/nwis/uv?09304800,09304800,40.0225833,108.1199444,5928.0,Upper White
+438,WRMC2,White ,CO,6300.0,18,http://waterdata.usgs.gov/co/nwis/uv?09304500,09304500,40.0335849,107.8622946,6300.0,Upper White
+439,WRSU1,White ,UT,7230.0,31,http://waterdata.usgs.gov/ut/nwis/uv?09312600,09312600,39.8757928,111.0373878,7230.0,Price
+440,WTRU1,Whiterocks ,UT,7200.0,24,http://waterdata.usgs.gov/ut/nwis/uv?09299500,09299500,40.5935653,109.9323739,7200.0,Duchesne
+441,WWDA3,Whitewater Draw ,AZ,3909.0,6,http://waterdata.usgs.gov/az/nwis/uv?09537500,09537500,31.35232457,109.5850677,3909.0,Whitewater Draw
+442,WFLC2,Williams Fork ,CO,8790.0,10,http://waterdata.usgs.gov/co/nwis/uv?09036000,09036000,39.833875,106.0564079,8790.0,Colorado Headwaters
+443,WFRC2,Williams Fork ,CO,7615.0,12,http://waterdata.usgs.gov/co/nwis/uv?09038500,09038500,40.03592778,106.2050139,7615.0,Colorado Headwaters
+444,WIKC2,Williams Fork ,CO,6170.0,11,http://waterdata.usgs.gov/co/nwis/uv?09249750,09249750,40.43719419,107.6478456,6170.0,Upper Yampa
+445,WVAA3,Williamson Valley Wash ,AZ,4455.0,1,http://waterdata.usgs.gov/az/nwis/uv?09502800,09502800,34.8666865,112.6132308,4455.0,Big Chino-Williamson Valley
+446,WCKC2,Willow Ck ,CO,8024.0,2,http://waterdata.usgs.gov/co/nwis/uv?09021000,09021000,40.14581899,105.9400156,8024.0,Colorado Headwaters
+447,CGGC2,Yampa ,CO,6100.0,10,http://waterdata.usgs.gov/co/nwis/uv?09247600,09247600,40.48080479,107.6142338,6100.0,Upper Yampa
+448,MBLC2,Yampa ,CO,5900.0,12,http://waterdata.usgs.gov/co/nwis/uv?09251000,09251000,40.50274666,108.0334152,5900.0,Lower Yampa
+449,STMC2,Yampa ,CO,6695.0,5,http://waterdata.usgs.gov/co/nwis/uv?09239500,09239500,40.4829861,106.8324306,6695.0,Upper Yampa
+450,YASC2,Yampa ,CO,7240.0,2,http://waterdata.usgs.gov/co/nwis/uv?09237450,09237450,40.2642611,106.8917667,7240.0,Upper Yampa
+451,YDLC2,Yampa ,CO,5600.0,17,http://waterdata.usgs.gov/co/nwis/uv?09260050,09260050,40.45163387,108.525101,5600.0,Lower Yampa
+452,YMSC2,Yampa ,CO,7050.0,4,http://waterdata.usgs.gov/co/nwis/uv?09237500,09237500,40.28654444,106.8290556,7050.0,Upper Yampa
+453,YLLU1,Yellowstone ,UT,7430.0,20,http://waterdata.usgs.gov/ut/nwis/uv?09292500,09292500,40.51189299,110.3415491,7430.0,Duchesne
+454,ZUIN5,Zuni ,NM,6450.0,1,http://waterdata.usgs.gov/nm/nwis/uv?09386950,09386950,35.10027778,108.7516667,6450.0,Zuni
