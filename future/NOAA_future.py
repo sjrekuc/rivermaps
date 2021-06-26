@@ -2,6 +2,7 @@ import csv
 import requests
 import os
 import shutil
+import pickle
 # import mysql.connector
 
 ## import list of gauges and corresponding names in NOAA that we want to use
@@ -82,22 +83,55 @@ with open('NOAA/target_models.csv', 'r') as f:
     reader = csv.reader(f)
     targets = list(reader)[0]
 
-print(targets)
-
 # iterate through that list of target gages
-for t in target:
+models = []
+for t in targets:
+    # initialize the dictionary
+    d = {}
     # pull model file
-    with open('NOAA/model_' + t + '_.csv', 'r') as f:
+    with open('NOAA/model_' + t + '_.csv', "rb") as f:
         reader = csv.reader(f)
-        
+        for row in reader:
+            try:
+                if row[0] == 'target':
+                    d[row[0]] = row[1]
+                else:
+                    d[row[0]] = float(row[1])
+            except:
+                pass
+        #d = dict((rows[0],rows[1]) for rows in reader)
+    models.append(d)
 
-# 
+# models is now a list of dictionary that contain the model values
+print(len(models))
+# hold the values of the models on this particular day - overwrite it on each new day
 
-# iterate through the first layer of the nested dictionary
-# 
-# loads a list of models from CSV
-# loads models from that list
+
+# list of things the model that are not features
+not_feat = ['target', 'score', 'intercept', 'alpha']
+# iterate through the first layer of the nested dictionary of future_flow GO BY DATES
+for date in future_flow:
+    modeled_future = {}
+    # run each of the models for reach of the dates
+    for m in models:
+        t = m['target']
+        # dis is the flow
+        dis = m['intercept']
+        for key in m:
+            if key not in not_feat:
+                dis += future_flow[date][key] * m[key]
+        # resulting dis is the flow
+        modeled_future[t] = dis
+    # after all of the models have been applied, we can append this to the CSV for that date
+    print(modeled_future)
+    with open(date, 'a') as fo:
+	    for n in modeled_future:
+	        fo.write(n + "=" + str(modeled_future[n]) + '\n')
+    print(date)
 # runs the models based on those values
+
+# list of tuples (USGS, Flow) for the model results
+
 # appends those gage predictions to that existing file (open file again with append)
 # DONE!
 
