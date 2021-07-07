@@ -126,7 +126,7 @@ for date in future_flow:
     print(modeled_future)
     with open(date, 'a') as fo:
 	    for n in modeled_future:
-	        fo.write(n + "=" + str(modeled_future[n]) + '\n')
+	        fo.write(n + "=" + str(round(modeled_future[n], 2)) + '\n')
     print(date)
 # runs the models based on those values
 
